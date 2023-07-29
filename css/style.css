@@ -1,0 +1,121 @@
+:root {
+    /* Color */
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --green2: #269c42;
+ 
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #208136;
+    --succes2:#1a702e;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+
+
+    /* BG color */
+    --bg-white: hsl(0, 0%, 100%);
+--bg-black-alpha-20: hsla(0, 0%, 0%, 0.2);
+--bg-lavender-blush: hsl(0, 100%, 98%);
+--bg-majorelle-blue-alpha-5: hsla(249, 95%, 63%, 0.05);
+--bg-misty-rose: hsl(0, 100%, 95%);
+--bg-red-salsa: hsl(357, 94%, 63%);
+--bg-red-salsa-alpha-5: hsla(357, 94%, 63%, 0.05);
+--bg-english-vermillion: hsl(357, 64%, 53%);
+--bg-chrome-yellow-alpha-5: hsla(40, 100%, 50%, 0.05);
+--bg-sunglow-alpha-10: hsla(48, 100%, 50%, 0.1);
+--bg-gainsboro: hsl(0, 0%, 85%);
+
+/* Text Color */
+--text-white: hsl(0, 0%, 100%);
+--text-gunmetal: hsl(209, 40%, 14%);
+--text-light-coral: hsl(357, 96%, 73%);
+--text-granite-gray: hsl(210, 4%, 38%);
+--text-sunglow: hsl(48, 100%, 50%);
+
+
+    /* Shaodow Box */
+    --shadow3: 0 5px 10px hsla(357, 64%, 53%, 25%);
+    --shadow4: 0 5px 50px hsla(357, 64%, 53%, 30%);
+/* Transition */
+    --transition-1: 250ms ease;
+    --transition-2: 500ms ease;
+    
+--cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+
+}
+ .navbar-nav .nav-link {
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  margin-right: 15px;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+  transition: .5s;
+}
+ .navbar-nav .nav-link:hover,
+ .navbar-nav .nav-link.active {
+    color:  #00E194 !important;
+}
+body{
+  background-color: var(--bg-white) ;
+}
+
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+.bd-navbar .navbar-brand {
+  color: #000000;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bd-gutter {
+  --bs-gutter-x: 3rem;
+}
+
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  
+}
+
+.my-1 {
+  margin-top: 0.25rem!important;
+  margin-bottom: 0.25rem!important;
+}
+.d-block {
+  display: block!important;
+}
+
+.p-0 {
+  padding: 0!important;
+}
+
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+

@@ -1,0 +1,4794 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <title>Travelang</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Link -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+        <link  href="lib/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="lib/icofont/icofont.css">
+  <link rel="stylesheet" href="lib/icofont/icofont.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ 
+  <style>
+
+
+
+    :root{
+   
+      /* Shaodow Box */
+          --shadow3: 0 5px 10px hsla(357, 64%, 53%, 25%);
+          --shadow4: 0 5px 50px hsla(357, 64%, 53%, 30%);
+      /* Transition */
+          --transition-1: 250ms ease;
+          --transition-2: 500ms ease;
+
+
+          --header-height: 3rem;
+
+          --hue: 174;
+          --sat: 63%;
+          --first-color: hsl(var(--hue), var(--sat), 40%);
+          --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+          --title-color: hsl(var(--hue), 12%, 15%);
+          --text-color: hsl(var(--hue), 8%, 35%);
+          --body-color: hsl(var(--hue), 100%, 99%);
+          --container-color: #FFF;
+        
+          
+          --body-font: 'Open Sans', sans-serif;
+          --h1-font-size: 1.5rem;
+          --normal-font-size: .938rem;
+          --tiny-font-size: .625rem;
+        
+        
+          --z-tooltip: 10;
+          --z-fixed: 100;
+        
+          --h1-font-size: 2.25rem;
+    --normal-font-size: 1rem;
+      }
+
+.Navtop-mobile{
+  display: none;
+}
+      .navbar-mobile{
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* Responsif untuk ukuran mobile */
+
+
+@media screen and (max-width: 992px) {
+  /* Navbar Mobile */
+
+
+  
+  #myBtn {
+    display: none;
+    position: fixed;
+    top: 80%!important; /* Mengatur jarak dari atas */
+    right: 20px!important; /* Mengatur jarak dari kanan */
+    z-index: 99;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background-color: #001E3C;
+    color: white;
+    cursor: pointer;
+    width: 40px; /* Mengatur lebar tombol */
+    height: 40px; /* Mengatur tinggi tombol */
+    border-radius: 10px;
+  }
+
+  .Navtop-mobile {
+    
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent; /* Background warna awal transparan */
+    transition: background-color 0.3s ease-in-out; /* Efek transisi perubahan warna */
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    vertical-align: middle;
+    max-width: 150px;
+}
+
+.navbar-tit {
+    margin: 0;
+    font-size: 30px;
+    color: #FFF;
+    margin-left: 10px;
+}
+.navbar-tit:hover{
+  transform: scale(1.2);
+  transition: var(--transition-2);
+  color: #00E194!important;
+}
+.navbar-brand img:hover{
+  transform: scale(1.2);
+  transition: var(--transition-2);
+
+}
+
+
+.navbar-right {
+    margin-left: auto;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 50%;
+}
+.profile-picture:hover{
+  transform: scale(1.2);
+  transition: var(--transition-2);
+  border: #00E194 solid 2px;
+}
+
+/* CSS untuk navbar sticky */
+.navtop-mobile-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+ background-color: #f8f8f8;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 9999;
+  padding: 10px; /* Atur ukuran padding sesuai kebutuhan Anda */
+  height: 70px; /* Atur ukuran tinggi sesuai kebutuhan Anda */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ transition: var(--transition-2);
+  padding-bottom: 25px;
+  
+}
+.navtop-mobile-sticky .navbar-tit {
+  color: #000!important; 
+}
+.navtop-mobile-sticky .navbar-tit:hover{
+  transform: scale(1.2);
+  transition: var(--transition-2);
+  color: #00E194!important;
+}
+
+    .nav__menu {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: var(--container-color);
+      box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+      width: 100%;
+      height: 4rem;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: center; /* Posisi menu di tengah secara horizontal */
+      align-items: center; /* Posisi menu di tengah secara vertikal */
+      border-radius: 1.25rem 1.25rem 0 0;
+      transition: .4s;
+      gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+    }
+  
+    .nav__list {
+      display: flex;
+      gap: 2.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+      margin: 0; /* Hapus margin sebelumnya */
+      justify-content: center; /* Posisi menu di tengah secara horizontal */
+      align-items: center; /* Posisi menu di tengah secara vertikal */
+    }
+  
+    .nav__list--left {
+      flex: none; /* Menghapus flex agar menu kiri tidak menempati sisa ruang */
+      justify-content: center; /* Menyusun menu kiri ke tengah */
+    }
+  
+    .nav__list--right {
+      display: flex;
+      gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+      justify-content: center; /* Menyusun menu kanan ke tengah */
+    }
+  
+  .navbar-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Navbar Desktop */
+  .navbar-desk {
+    display: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .navbar-mobile {
+
+
+    width: 100%;
+    background-color: var(--container-color);
+    z-index: var(--z-fixed);
+    transition: .4s;
+  }
+
+
+  .nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__img {
+    width: 32px;
+    border-radius: 50%;
+  }
+
+  .nav__logo {
+    color: #000000;
+    font-weight: 600;
+  }
+
+  .nav__list,
+  .nav__link {
+    display: flex;
+  }
+
+  .nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    color: var(--title-color);
+    font-weight: 600;
+  }
+
+  .nav__list {
+    justify-content: space-around;
+  }
+
+  .nav__name {
+    font-size: var(--tiny-font-size);
+  }
+
+  .nav__icon {
+    font-size: 1.5rem;
+  }
+
+  /* Active link */
+  .active-link {
+    position: relative;
+    color:#00E194;
+    transition: .3s;
+  }
+  a:hover{
+    color:#00E194!important;
+  }
+  .nav__item:hover{
+transition: var(--transition-2);
+   transform: scale(1.2);
+ }
+}
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center; /* Posisi menu di tengah secara horizontal */
+    align-items: center; /* Posisi menu di tengah secara vertikal */
+    border-radius: 1.25rem 1.25rem 0 0;
+    transition: .4s;
+    gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 2rem; /* Tambahkan jarak antara list item pada menu navbar */
+    margin: 0; /* Hapus margin sebelumnya */
+    justify-content: center; /* Posisi menu di tengah secara horizontal */
+    align-items: center; /* Posisi menu di tengah secara vertikal */
+  }
+
+  .nav__list--left {
+    flex: none; /* Menghapus flex agar menu kiri tidak menempati sisa ruang */
+    justify-content: center; /* Menyusun menu kiri ke tengah */
+  }
+
+  .nav__list--right {
+    display: flex;
+    gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+    justify-content: center; /* Menyusun menu kanan ke tengah */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mengatur lebar dan warna latar belakang scrollbar */
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: #d4d5d5; /* Ganti dengan warna background scrollbar yang diinginkan */
+}
+
+/* Mengatur warna thumb scrollbar */
+body::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Ganti dengan warna thumb scrollbar yang diinginkan */
+  border-radius: 10px; /* Ganti dengan radius border yang diinginkan */
+  height: 10px; /* Ganti dengan tinggi thumb scrollbar yang diinginkan */
+}
+
+/* Mengatur warna thumb scrollbar saat dihover */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #777; /* Ganti dengan warna thumb scrollbar saat dihover yang diinginkan */
+}
+
+
+.profile-picture {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+}
+.profile-picture img:hover{
+  transform: scale(1.2);
+  transition: var(--transition-2);
+  border: #00E194 solid 2px;
+  border-radius: 50%;
+
+}
+.profile-picture img {
+  width: 50px;
+  height: 50px;
+  }
+    .hero-header {
+      position: relative;
+      z-index: -1; /* Menyembunyikan hero di belakang navbar */
+    }
+    
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1; /* Menyembunyikan navbar di depan hero */
+    }
+    .navbar-title {
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease-in-out;
+      color: white!important;
+    }
+    
+    .navbar-title:hover {
+     
+      color: #00E194!important;
+      transform: scale(1.1);
+    }
+    .navbar-brand:hover
+    {
+      transition: transform 0.5s ease-in-out;
+      transform: scale(1.2);
+    }
+
+
+    
+
+    .social-media-icons .icofont {
+      text-decoration: none; /* menghilangkan underline pada ikon */
+    }
+   
+.navbar .nav-link,
+.navbar .navbar-title {
+  color: #000000; /* Set warna teks menjadi hitam */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Tambahkan animasi transisi untuk warna dan transform */
+}
+
+.navbar .nav-link:hover
+ {
+  color: #00E194 !important; /* Ubah warna teks menjadi #00E194 saat dihover */
+  transform: scale(1.1); /* Efek skala 1.1 saat dihover */
+  position: relative; /* Menjadikan posisi elemen relatif */
+}
+
+.navbar .nav-link::after
+ {
+  content: ""; /* Tambahkan konten kosong */
+  display: block; /* Ubah menjadi elemen blok */
+  width: 0; /* Set lebar awal menjadi 0 */
+  height: 2px; /* Set tinggi garis bawah */
+  background-color: #00E194; /* Set warna garis bawah */
+  position: absolute; /* Menjadikan posisi elemen absolut */
+  bottom: 5px; /* Mengatur jarak garis bawah dari teks */
+  left: 0; /* Mengatur posisi kiri 0 */
+  opacity: 0; /* Set opacity menjadi 0 (transparan) */
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out; /* Tambahkan animasi transisi untuk opacity dan lebar */
+  padding-bottom: 2px;
+  
+}
+
+.navbar .nav-link:hover::after
+ {
+  opacity: 1; /* Set opacity menjadi 1 (tidak transparan) saat dihover */
+  width: 100%; /* Set lebar garis bawah saat dihover menjadi 100% */
+}
+
+.navbar .dropdown-menu {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Tambahkan animasi transisi untuk opacity dan transform */
+  opacity: 0; /* Set opacity dropdown menu menjadi 0 (transparan) secara default */
+  transform: translateY(-10px); /* Set transform menu dropdown menggeser -10px ke atas secara default */
+}
+
+.navbar .nav-item.dropdown:hover > .dropdown-menu {
+  opacity: 1; /* Set opacity dropdown menu menjadi 1 (tidak transparan) saat menu item dropdown dihover */
+  transform: translateY(0); /* Set transform menu dropdown menjadi 0 saat menu item dropdown dihover */
+  z-index: 1; /* Set z-index untuk menempatkan dropdown menu di atas elemen lain */
+}
+
+.navbar .nav-item.dropdown:hover > .nav-link {
+  color: #00E194 !important; /* Ubah warna teks navlink menjadi #00E194 saat menu item dropdown dihover */
+  transform: scale(1.1); /* Efek skala 1.1 saat menu item dropdown dihover */
+}
+
+
+
+.navbar.sticky .nav-link,
+.navbar.sticky .navbar-title {
+  color: #000!important; /* Ubah warna teks menjadi hitam */
+}
+.navbar.sticky .navbar-title:hover{
+color:#00E194!important;
+}
+.navbar.sticky .dropdown-item {
+  color: #000 !important; /* Ubah warna teks dropdown menjadi hitam */
+}
+
+.navbar.sticky .nav-link:hover{
+  color: #00E194!important;
+}
+.navbar {
+  /* Tambahkan animasi smooth menggunakan animate.css */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animate__animated {
+  /* Tambahkan animasi smooth menggunakan animate.css */
+  animation-fill-mode: both;
+}
+
+/* Tambahkan class animasi untuk animasi fadeInDown */
+.animate__fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .navbar-left {
+      margin-right: 5px; /* Mengurangi margin untuk ukuran mobile */
+  }
+
+  .navbar-brand img {
+      max-width: 80px; /* Mengatur max-width agar responsif pada mobile */
+  }
+
+  .navbar-title {
+      font-size: 16px; /* Mengurangi ukuran font pada mobile */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+.container-sub {
+  background-color: #fff;
+  width: 450px!important;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  line-height: 1.5;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+.container-sub-close {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  background-color: #fff;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: #2e4052;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+}
+.container-sub img {
+  width: 200px!important;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.container-sub-text h2 {
+  font-size: 1rem!important;
+  color: #1a2250;
+}
+.container-sub-text p {
+  font-size: 12px!important;
+  color: #3b4169;
+  margin: 10px 0;
+}
+
+
+}
+.hero-text h1{
+  font-weight: 470;
+}
+.hero-text p{
+  font-weight: 350;
+}
+@media screen and (max-width: 360px) {
+  .hero-text p{
+    font-size: 9px!important;
+    
+  }
+  
+  .hero-text h1{
+  font-size: 30px!important;
+  }
+  .social-media-icons {
+
+    margin-top: 100px!important;
+  }
+  
+
+}
+
+
+@media screen and (max-width: 430px) {
+  .hero-text p{
+    font-size: 10px!important;
+    margin-top: 70px!important;
+  }
+  
+  .hero-text h1{
+  font-size: 25px!important;
+  margin-top: 50px!important;
+
+  }
+
+  
+.social-media-icons {
+
+  margin-top: 80px!important;
+}
+
+}
+
+@media screen and (max-width: 575px) {
+
+
+.hero-text p{
+  font-size: 14px!important;
+}
+
+.hero-text h1{
+font-size: 30px!important;
+}
+  .container-sub{
+    display: none;
+  }
+  .sub-btn{
+    display: none;
+  }
+
+
+
+
+
+
+  .nav__menu {
+    padding: 0; /* Hapus padding sebelumnya */
+    margin-top: 1rem; /* Tambahkan margin top untuk memberikan jarak pada menu navbar */
+    display: flex;
+    justify-content: center; /* Posisi menu di tengah secara horizontal */
+    align-items: center; /* Posisi menu di tengah secara vertikal */
+    padding-right: 20px;
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+    margin: 0; /* Hapus margin sebelumnya */
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .nav__name {
+    display: none;
+  }
+  .nav__list {
+    
+    gap: 2rem; /* Tambahkan jarak antara list item pada menu navbar */
+    margin: 0; /* Hapus margin sebelumnya */
+    padding-right: 10px;
+  
+   
+  }
+  .nav__icon{
+    font-size: 16px;
+  }
+
+  .profile-picture {
+    width: 35px;
+    height: 35px;
+   
+    border-radius: 50%;
+   
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+.navbar-tit{
+  font-size: 20px;
+}
+.navtop-mobile-sticky{
+  padding-bottom: 10px;
+  
+}
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  top: 80%!important; /* Mengatur jarak dari atas */
+  right: 15px!important; /* Mengatur jarak dari kanan */
+  z-index: 99;
+  font-size: 20px!important;
+  border: none;
+  outline: none;
+  background-color: #001E3C;
+  color: white;
+  cursor: pointer;
+  width: 40px!important; /* Mengatur lebar tombol */
+  height: 40px!important; /* Mengatur tinggi tombol */
+  border-radius: 10px;
+}
+}
+
+
+.container-sub {
+  background-color: #fff;
+  width: 600px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  line-height: 1.5;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+.container-sub-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: #fff;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: #2e4052;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+}
+.container-sub img {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+.container-sub-text {
+  padding: 10px 40px 10px 10px;
+}
+.container-sub-text h2 {
+  font-size: 1.2rem;
+  color: #1a2250;
+}
+.container-sub-text p {
+  font-size: 14px;
+  color: #3b4169;
+  margin: 10px 0;
+}
+.container-sub-text input,
+.container-sub-text button {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 3px;
+}
+.container-sub-text .input-sub {
+  border: 2px solid #daddec;
+  margin: 5px 0 10px;
+  font-size: 1rem;
+  color: #656880;
+}
+
+
+.container-sub-text .button-sub {
+  background-image: linear-gradient(to right, #00E194, #00be7b);
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #00f8a1dd;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.container-sub-text .button-sub:hover {
+  transition:transform 0.3s ease-in-out;
+  box-shadow: none;
+  transform: scale(1.1);
+}
+.container-sub-text span {
+  display: block;
+  text-align: center;
+  margin: 20px 0 0;
+  color: #babdcb;
+  font-size: 12px;
+}
+
+.sub-btn:hover{
+  transform: scale(1.1);
+  transition: var(--transition-1);
+}
+.modal-content {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+ 
+  
+  
+}
+.modal-footer{
+  opacity: 0;
+}
+
+
+@keyframes animateModal {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to modal content */
+.animate-modal {
+  animation: animateModal 0.5s ease-in-out;
+}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  top: 90%; /* Mengatur jarak dari atas */
+  right: 20px; /* Mengatur jarak dari kanan */
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: #00E194;
+  color: white;
+  cursor: pointer;
+  width: 50px; /* Mengatur lebar tombol */
+  height: 50px; /* Mengatur tinggi tombol */
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #25ffb3;
+  transform: scale(1.1);
+  transition: var(--transition-2);
+}
+
+body{
+  overflow: hidden;
+}
+
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pre {
+  position: absolute;
+  margin-left: -55px;
+  margin-top: -100px;
+  height: 110px;
+  width: 110px;
+  left: 50%;
+  top: 50%;
+}
+svg {
+  width: 110px;
+  height: 110px;
+}
+
+path {
+  stroke: #9ea1a4;
+  stroke-width: 0.25;
+  fill: #241E20;
+}
+
+#cloud {
+  position: relative;
+  z-index: 2;
+}
+
+#cloud path {
+  fill: #efefef;
+}
+
+#sun {
+  margin-left: -10px;
+  margin-top: 6px;
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 45px;
+  top: 15px;
+  z-index: 1;
+  
+  animation-name: rotate;
+  animation-duration: 16000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#sun path {
+  stroke-width: 0.18;
+  fill: #a4a49e;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* Rain */
+.rain {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-top: -32px;
+  margin-left: 19px;
+}
+
+.drop {
+  opacity: 1;
+  background: #0067cd;
+  display: block;
+  float: left;
+  width: 3px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0px 0px 6px 6px;
+  
+  animation-name: drop;
+  animation-duration: 350ms;
+  animation-iteration-count: infinite;
+}
+
+.drop:nth-child(1) {
+  animation-delay: -130ms;
+}
+
+.drop:nth-child(2) {
+  animation-delay: -240ms;
+}
+
+.drop:nth-child(3) {
+  animation-delay: -390ms;
+}
+
+.drop:nth-child(4) {
+  animation-delay: -525ms;
+}
+
+.drop:nth-child(5) {
+  animation-delay: -640ms;
+}
+
+.drop:nth-child(6) {
+  animation-delay: -790ms;
+}
+
+.drop:nth-child(7) {
+  animation-delay: -900ms;
+}
+
+.drop:nth-child(8) {
+  animation-delay: -1050ms;
+}
+
+.drop:nth-child(9) {
+  animation-delay: -1130ms;
+}
+
+.drop:nth-child(10) {
+  animation-delay: -1300ms;
+}
+
+
+@keyframes drop {
+  50% {
+    height: 45px;
+    opacity: 0;
+  }
+
+  51% {
+    opacity: 0;
+  }
+
+  100% {
+    height: 1px;
+    opacity: 0;
+  }
+}
+
+.text {
+  font-family: Helvetica, 'Helvetica Neue', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-left: -43px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 11px;
+  color: #8a8a8a;
+  width: 200px;
+}
+
+
+
+
+
+.social-media-icons {
+
+  margin-bottom: 60px!important;
+}
+
+.social-media-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media-icons a i {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.social-media-icons a i:hover {
+  color: #00E194!important;
+  border: 2px solid #00E194!important;
+
+}
+
+
+
+
+.clear {
+  clear: both;
+}
+img {
+  max-width: 100%;
+  border: 0px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #e73700;
+}
+.game-section h2 {
+  margin-bottom: 48px;
+  padding-bottom: 16px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
+}
+h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 36px;
+}
+/*** Common Element CSS End ***/
+
+/* -------- title style ------- */
+.line-title {
+  position: relative;
+  width: 400px;
+}
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+.line-title::after {
+  width: 32px;
+  background: #e73700;
+}
+
+/*** Middle section CSS Start **/
+/* -------- Landing page ------- */
+.game-section {
+  padding: 60px 50px;
+}
+.game-section .owl-stage {
+  margin: 15px 0;
+  display: flex;
+  display: -webkit-flex;
+}
+.game-section .item {
+  margin: 0 15px 60px;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.game-section .item.active {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  
+}
+.game-section .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.517));
+}
+.game-section .item-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.game-section .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.game-section .item-desc p {
+  opacity: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+.game-section .item.active .item-desc p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.game-section .owl-theme.custom-carousel .owl-dots {
+  margin-top: -20px;
+  position: relative;
+  z-index: 5;
+}
+/*** Middle section CSS End ****/
+
+/** responsive css Start ***/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 260px;
+    height: 360px;
+  }
+  .game-section .item.active {
+    width: 400px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 46px));
+    -webkit-transform: translateY(calc(100% - 46px));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .game-section h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .line-title {
+    width: 330px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px 40px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 240px;
+    height: 330px;
+  }
+  .game-section .item.active {
+    width: 360px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  .game-section h2 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .line-title {
+    width: 250px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 30px 15px 20px;
+  }
+  .game-section .item {
+    margin: 0 10px 40px;
+    width: 200px;
+    height: 280px;
+  }
+  .game-section .item.active {
+    width: 270px;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  .game-section .item-desc {
+    padding: 0 14px 5px;
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+
+
+
+
+.title-about h2{
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom:60px;
+  padding-bottom: 20px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: #213b52;
+}
+
+.title-about  h2::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 120px;
+      height: 1px;
+      background: #ddd;
+      bottom: 1px;
+      left: calc(50% - 60px);
+}
+.title-about  h2::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background:#00E194;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+
+
+
+
+body{
+  background-color:  #eaedef;
+  
+}
+
+
+
+.about {
+  background-color: #FFFFFF;
+  width: 80%;
+	border-radius: 15px;
+
+	position: relative;
+	display: flex;
+  padding-top: 20px;
+
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+
+
+
+.about::before {
+  content: "";
+	position: absolute;
+  
+	top: -10px; /* Menggeser ke atas sejauh 10px */
+	left: -10px; /* Menggeser ke kiri sejauh 10px */
+	right: -10px; /* Menggeser ke kanan sejauh 10px */
+	bottom: -10px; /* Menggeser ke bawah sejauh 10px */
+	background-image: linear-gradient(to top, #e6e9f0 0%, #eaedef 100%);
+	 box-shadow: 0 15px 40px #CFDEF3;
+  transition: box-shadow 0.3s ease-in-out;
+	border-radius: 15px;
+	z-index: -1;
+
+} 
+
+
+.hero  {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+
+
+
+/* Case study */
+.case-study-about .col-md-12 {
+  transform: translateY(-80px);
+  -webkit-transform: translateY(-80px);
+  padding: 5em 3em;
+  margin-top: -90px;
+  background-color: #ffffff;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.15);
+  z-index:888;
+  border-radius: 15px;
+}
+.case-study .col-md-12 {
+  transform: translateY(-80px);
+  -webkit-transform: translateY(-80px);
+  padding: 5em 3em;
+  margin-top: -90px;
+  background-color: #ffffff;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.15);
+
+  border-radius: 15px;
+}
+h4.sub-heading {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #00E194;
+
+}
+
+
+
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #00E194 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+h3 .ser-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+p .ser-text{
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+.icon-wrapper {
+  background-color: #00E194;
+  position: relative;
+  margin: auto;
+  font-size: 25px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  width: 300px;
+  margin: 20px;
+}
+
+.card {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.icon-wrapper {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.ser-text {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #00E194;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+section {
+  width: 100%;
+}
+.tag{
+  text-align: center;
+  font-size: 1.1rem}
+.card{
+  height: 320px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: -1px 3px 5px #a7a7a7
+}
+.testimonial{
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 500
+}
+.active-star{
+  color: #FBC02D
+  ;margin-bottom: 8px
+}
+.active-star:hover{
+  color: #F9A825;
+  cursor: pointer
+}
+.profile{
+  padding-top: 10px;
+}
+.name{
+  font-weight: 700;
+  margin-top: 5px;
+}
+.card:hover{
+  color: white!important;
+}
+
+.designation
+{
+  font-size: 0.84rem
+  ;font-weight: 600
+}
+.test.owl-carousel
+{
+  margin-bottom: 15px
+}
+.test.owl-carousel .owl-stage-outer{
+  padding: 40px 10px;
+  height: 380px
+}
+.test.owl-carousel .owl-item img
+{
+  width: 45px !important;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover
+}
+
+
+
+
+
+
+@media(max-width: 575.5px)
+{
+  .container{
+    margin: 0px;
+    padding: 20px}
+  }
+
+
+
+
+
+
+  .package-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.package-item img {
+    transition: .5s;
+   
+}
+
+.package-item:hover img {
+    transform: scale(1.1);
+}
+
+
+.icofont-heart:hover {
+  color: #E83316;
+  transform: scale(1.1)
+}
+.post-labels {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+}
+.post-labels {
+  z-index: 1;
+}
+.post-labels ul {
+  margin: 0px;
+  padding: 0px;
+}
+.post-labels ul li {
+  display: table;
+  font-size: 14px;
+  font-weight: 500;
+  list-style: none;
+  padding: 3px 8px;
+  position: relative;
+  border-radius: 3px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #ffffff;
+  background-color: blue;
+  text-transform: uppercase;
+  border-bottom-right-radius: 0px;
+}
+.post-labels ul .bg-primary:after {
+  border-right: 8px solid #007bff;
+}
+.post-labels ul .bg-success:after {
+  border-right: 8px solid #198754;
+}
+.post-labels ul li:after {
+  right: 0;
+  width: 0px;
+  height: 0px;
+  content: '';
+  bottom: -8px;
+  position: absolute;
+  border-top: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.post-labels ul .bg-danger:after {
+  border-right: 8px solid #dc3545;
+}
+.slider {
+  margin-bottom: 30px;
+  position: relative;
+}
+.slider .owl-item.active.center .slider-card {
+  opacity: 1;
+  background: #ff9966; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ff5e62, #ff9966); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+}
+.slider-card {
+  background: #fff;
+  padding: 0px 0px;
+  margin: 15px 10px 15px 5px;
+  border-radius: 16px;
+  box-shadow: 0 15px 20px -15px rgb(0 0 0 / 73%);
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.3s;
+}
+.section-100 {
+  padding: 100px 0;
+}
+.text-striked {
+  text-decoration: line-through;
+}
+.product-card {
+  box-shadow: 0 12px 17px rgba(129, 140, 151, 0.1);
+  border-radius: 20px;
+
+
+}
+.product-card .product-image {
+  height: 300px;
+  position: relative;
+}
+.product-card .product-image .product-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-card .product-details {
+  position: relative;
+}
+.product-card .product-details a:hover {
+  text-decoration: none;
+  color: #0062cc;
+}
+.text-truncate--2 {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+}
+
+
+.owl-nav {
+  top: -50px;
+  right: -2px;
+  display: table;
+  position: absolute;
+}
+
+.owl-prev,
+.owl-next {
+ 
+text-align: center;
+  width: 35px;
+  height: 35px;
+  
+  border-radius: 6px;
+  position: relative;
+  color: #ffffff;
+  background-color: #00E194;
+
+
+
+
+}
+
+.owl-prev {
+  float: left;
+  left: 10px;
+}
+
+.owl-next {
+  float: right;
+  right: 10px;
+}
+
+.testinu .owl-nav{
+  display: none;
+}
+
+
+.portfolio{
+  width: 100%;
+  padding: 0px 8%;
+}
+
+.button-group{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.button-group .button{
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #c8d1d8;
+  color: var(--primary-clr);
+  font-style: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.button-group .button.active{
+  background-color: var(--primary-clr);
+  color: var(--body-clr);
+}
+.button-group .button:hover{
+  background-color: var(--primary-clr);
+  color: var(--body-clr);
+}
+div.gallery{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.gallery .item{
+  position: relative;
+  margin: 4px;
+  width: calc(33.33% - 8px);
+  overflow: hidden;
+  cursor: pointer;
+}
+.item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+div.gallery .item:hover img{
+  transform: scale(1.15);
+}
+
+
+
+@media(max-width: 1024px){
+  div.gallery .item{
+    width: calc(50% - 8px);
+  }
+}
+
+@media(max-width: 600px){
+  div.gallery .item{
+    width: 100%;
+    margin: 4px 0px;
+  }
+}
+
+
+.example-initial-animation {
+	animation: initial-animation 2s ease;
+}
+
+@keyframes  initial-animation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(360deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+
+.buton{
+  background-color: #00E194;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.icofont-location-pin{
+  color: red!important;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .h-md-250 {
+    height: auto;
+  }
+  .row.g-0.flex-md-row.mb-4 {
+    flex-direction: column;
+  }
+  .col-md-6 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .col-md-6 .col-auto.d-none.d-lg-block {
+    display: none;
+  }
+
+  
+}
+
+
+@media (max-width: 991px) {
+  .respo-blog {
+    display: block!important;
+    display: flex;
+justify-content: center;
+align-items: center;
+  }
+}
+.respo-blog{
+  display: none;
+}
+
+.result {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result h2 {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.result h5 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.result .temp {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.result p {
+  font-size: 20px;
+  margin-bottom: 17px;
+}
+
+.result i {
+  font-size: 80px;
+  margin-bottom: 15px;
+}
+
+.result .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.result .details div {
+  flex: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.result .details i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.result .details p {
+  margin: 0;
+  font-size: 20px;
+}
+
+
+.footer-32892 {
+  background-color: #202126;
+  padding: 2.5rem 0;
+  color: #888;
+  font-size: 16px; }
+  
+  .footer-32892 .subscribe {
+    position: relative; }
+    .footer-32892 .subscribe .form-control {
+      background-color: #292b31;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-radius: 30px;
+      height: 55px;
+      padding-left: 30px;
+      padding-right: 130px;
+      border: none;
+      color: #fff; }
+      .footer-32892 .subscribe .form-control::-webkit-input-placeholder {
+        color: #ccc;
+        font-size: 14px; }
+      .footer-32892 .subscribe .form-control::-moz-placeholder {
+        color: #ccc;
+        font-size: 14px; }
+      .footer-32892 .subscribe .form-control:-ms-input-placeholder {
+        color: #ccc;
+        font-size: 14px; }
+      .footer-32892 .subscribe .form-control:-moz-placeholder {
+        color: #ccc;
+        font-size: 14px; }
+    .footer-32892 .subscribe .btn-submit {
+      background:#00E194;
+      box-shadow: 0 5px 20px #00f8a1dd;
+      height: 47px;
+      border-radius: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      color: #fff;
+      font-weight: bold;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+    }
+   
+  .footer-32892 .tweets li {
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-style: italic;
+    font-family: "Source Serif Pro", serif; }
+    .footer-32892 .tweets li span {
+      color: #fff; }
+  .footer-32892 .footer-menu-wrap {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem !important;
+    margin-top: 7rem; }
+  .footer-32892 .footer-menu {
+    margin-bottom: 0; }
+    .footer-32892 .footer-menu li {
+      display: inline-block; }
+      @media (max-width: 767.98px) {
+        .footer-32892 .footer-menu li {
+          display: block; } }
+      .footer-32892 .footer-menu li a {
+        padding: 10px;
+        display: inline-block;
+        color: #fff; }
+        @media (max-width: 767.98px) {
+          .footer-32892 .footer-menu li a {
+            display: block;
+            padding-left: 0px; } }
+      .footer-32892 .footer-menu li:first-child a {
+        padding-left: 0; }
+  .footer-32892 .site-logo {
+    color: #fff;
+    font-size: 20px; }
+  
+
+
+    .input-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+    
+    .input-group .form-control {
+      border-radius: 50px;
+      border: none;  border: #00E194 solid 2px;
+
+    }
+    
+    .input-group .form-control:focus {
+      box-shadow: none;
+    }
+    
+    .input-group .btn {
+      border-radius: 50px;
+      margin-left: -3px;
+    }
+
+    .footer-menu-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .site-logo-wrap {
+      margin-top: 20px; /* Atur jarak sesuai kebutuhan */
+    }
+    
+    .footer-menu {
+      margin-top: 20px; /* Atur jarak sesuai kebutuhan */
+    }
+    .site-logo{
+      right: 0px;
+    }
+    .credit {
+      left: 0px;
+      
+    }
+    
+
+
+    .destination__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    
+    .destination__card {
+      overflow: hidden;
+      position: relative;
+      isolation: isolate;
+      cursor: pointer;
+    }
+    
+    .destination__card img {
+      border-radius: 1rem;
+    }
+    
+    .destination__details {
+      position: absolute;
+      width: calc(100% - 2rem);
+      padding: 1rem;
+      bottom: -6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: var(--extra-light);
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(4px);
+      border-radius: 10px;
+      z-index: 1;
+      transition: 0.3s;
+    }
+    
+    .destination__card:hover .destination__details {
+      bottom: 1rem;
+    }
+    
+    .destination__title {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .destination__subtitle {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    
+    .trip {
+      background-color: var(--secondary-color);
+    }
+    
+    .trip__container :is(.section__title, .section__subtitle, .view__all) {
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    
+    .trip__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+    
+    .trip__card {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .trip__details {
+      padding: 1rem;
+      display: grid;
+      gap: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      background-color: var(--extra-light);
+      cursor: pointer;
+    }
+    
+    .rating {
+      color: goldenrod;
+    }
+    
+    .booking__price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .price span {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .book__now {
+      padding: 0.5rem 1.5rem;
+      color: var(--primary-color);
+      outline: none;
+      border: 1px solid var(--primary-color);
+      border-radius: 5rem;
+      background-color: transparent;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .book__now:hover {
+      color: var(--extra-light);
+      background-color: var(--primary-color);
+    }
+    .item-desc{
+      text-align: justify;
+      font-size: 12px;
+    }
+    
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.section__subtitle {
+  font-size: 1rem;
+  color: var(--text-dark);
+  max-width: calc(var(--max-width) / 2);
+}
+   
+@media (width < 900px) {
+  .item-desc{
+    text-align: justify;
+    font-size: 10px;
+  }
+  .nav__links {
+    display: none;
+  
+  }
+
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header__image {
+    min-height: 500px;
+  }
+
+  .destination__grid {
+    gap: 1rem;
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 600px) {
+
+  .item-desc{
+    text-align: justify;
+    font-size: 10px;
+  }
+  .destination__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallary__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subscribe__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gallary__container {
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.image__gallary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.gallary__col {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+.gallary__col img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.itinerary-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.itinerary-container h2 {
+  margin-top: 20px;
+}
+
+.itinerary-container p {
+  margin-bottom: 40px;
+}
+
+.item-desc{
+  text-align: justify;
+  
+}
+
+
+    </style>
+</head>
+
+
+<body>
+
+
+  <div class="preloader">
+    <div class="pre" style="opacity: 1; ">
+      <svg version="1.1" id="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve" style="opacity: 1; margin-left: 0px; margin-top: 0px;">
+        <g>
+          <path fill="none" d="M6.942,3.876c-0.4-0.692-1.146-1.123-1.946-1.123c-0.392,0-0.779,0.104-1.121,0.301c-1.072,0.619-1.44,1.994-0.821,3.067C3.454,6.815,4.2,7.245,5,7.245c0.392,0,0.779-0.104,1.121-0.301C6.64,6.644,7.013,6.159,7.167,5.581C7.321,5,7.243,4.396,6.942,3.876z M6.88,5.505C6.745,6.007,6.423,6.427,5.973,6.688C5.676,6.858,5.34,6.948,5,6.948c-0.695,0-1.343-0.373-1.69-0.975C2.774,5.043,3.093,3.849,4.024,3.312C4.32,3.14,4.656,3.05,4.996,3.05c0.695,0,1.342,0.374,1.69,0.975C6.946,4.476,7.015,5,6.88,5.505z"></path>
+          <path fill="none" d="M8.759,2.828C8.718,2.757,8.626,2.732,8.556,2.774L7.345,3.473c-0.07,0.041-0.094,0.132-0.053,0.202C7.319,3.723,7.368,3.75,7.419,3.75c0.025,0,0.053-0.007,0.074-0.02l1.211-0.699C8.774,2.989,8.8,2.899,8.759,2.828z"></path>
+          <path fill="none" d="M1.238,7.171c0.027,0.047,0.077,0.074,0.128,0.074c0.025,0,0.051-0.008,0.074-0.02l1.211-0.699c0.071-0.041,0.095-0.133,0.054-0.203S2.574,6.228,2.503,6.269l-1.21,0.699C1.221,7.009,1.197,7.101,1.238,7.171z"></path>
+          <path fill="none" d="M6.396,2.726c0.052,0,0.102-0.026,0.13-0.075l0.349-0.605C6.915,1.976,6.89,1.885,6.819,1.844c-0.07-0.042-0.162-0.017-0.202,0.054L6.269,2.503C6.228,2.574,6.251,2.666,6.322,2.706C6.346,2.719,6.371,2.726,6.396,2.726z"></path>
+          <path fill="none" d="M3.472,7.347L3.123,7.952c-0.041,0.07-0.017,0.162,0.054,0.203C3.2,8.169,3.226,8.175,3.25,8.175c0.052,0,0.102-0.027,0.129-0.074l0.349-0.605c0.041-0.07,0.017-0.16-0.054-0.203C3.603,7.251,3.513,7.276,3.472,7.347z"></path>
+          <path fill="none" d="M3.601,2.726c0.025,0,0.051-0.007,0.074-0.02C3.746,2.666,3.77,2.574,3.729,2.503l-0.35-0.604C3.338,1.828,3.248,1.804,3.177,1.844C3.106,1.886,3.082,1.976,3.123,2.047l0.35,0.604C3.5,2.7,3.549,2.726,3.601,2.726z"></path>
+          <path fill="none" d="M6.321,7.292c-0.07,0.043-0.094,0.133-0.054,0.203l0.351,0.605c0.026,0.047,0.076,0.074,0.127,0.074c0.025,0,0.051-0.006,0.074-0.02c0.072-0.041,0.096-0.133,0.055-0.203l-0.35-0.605C6.483,7.276,6.393,7.253,6.321,7.292z"></path>
+          <path fill="none" d="M2.202,5.146c0.082,0,0.149-0.065,0.149-0.147S2.284,4.851,2.202,4.851H1.503c-0.082,0-0.148,0.066-0.148,0.148s0.066,0.147,0.148,0.147H2.202z"></path>
+          <path fill="none" d="M8.493,4.851H7.794c-0.082,0-0.148,0.066-0.148,0.148s0.066,0.147,0.148,0.147l0,0h0.699c0.082,0,0.148-0.065,0.148-0.147S8.575,4.851,8.493,4.851L8.493,4.851z"></path>
+          <path fill="none" d="M5.146,2.203V0.805c0-0.082-0.066-0.148-0.148-0.148c-0.082,0-0.148,0.066-0.148,0.148v1.398c0,0.082,0.066,0.149,0.148,0.149C5.08,2.352,5.146,2.285,5.146,2.203z"></path>
+          <path fill="none" d="M4.85,7.796v1.396c0,0.082,0.066,0.15,0.148,0.15c0.082,0,0.148-0.068,0.148-0.15V7.796c0-0.082-0.066-0.148-0.148-0.148C4.917,7.647,4.85,7.714,4.85,7.796z"></path>
+          <path fill="none" d="M2.651,3.473L1.44,2.774C1.369,2.732,1.279,2.757,1.238,2.828C1.197,2.899,1.221,2.989,1.292,3.031l1.21,0.699c0.023,0.013,0.049,0.02,0.074,0.02c0.051,0,0.101-0.026,0.129-0.075C2.747,3.604,2.722,3.514,2.651,3.473z"></path>
+          <path fill="none" d="M8.704,6.968L7.493,6.269c-0.07-0.041-0.162-0.016-0.201,0.055c-0.041,0.07-0.018,0.162,0.053,0.203l1.211,0.699c0.023,0.012,0.049,0.02,0.074,0.02c0.051,0,0.102-0.027,0.129-0.074C8.8,7.101,8.776,7.009,8.704,6.968z"></path>
+        </g>
+      </svg>
+    
+      <svg version="1.1" id="cloud" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+        <path fill="none" d="M8.528,5.624H8.247c-0.085,0-0.156-0.068-0.156-0.154c0-0.694-0.563-1.257-1.257-1.257c-0.098,0-0.197,0.013-0.3,0.038C6.493,4.259,6.45,4.252,6.415,4.229C6.38,4.208,6.356,4.172,6.348,4.131C6.117,3.032,5.135,2.235,4.01,2.235c-1.252,0-2.297,0.979-2.379,2.23c-0.004,0.056-0.039,0.108-0.093,0.13C1.076,4.793,0.776,5.249,0.776,5.752c0,0.693,0.564,1.257,1.257,1.257h6.495c0.383,0,0.695-0.31,0.695-0.692S8.911,5.624,8.528,5.624z"></path>
+      </svg>
+    
+      <div class="rain">
+        <span class="drop"></span>
+        <span class="drop"></span>
+        <span class="drop"></span>
+        <span class="drop"></span>
+        <span class="drop"></span>
+        <span class="drop"></span>
+        <span class="drop"></span>
+        <span class="drop"></span>
+        <span class="drop"></span>
+        <span class="drop"></span>
+      </div>
+      
+      <div class="text">
+        Meramal destinasi Anda... Mohon menunggu
+      </div>
+    </div>
+
+    
+  </div>
+<div class="backtutop">
+  <button onclick="topFunction()" id="myBtn"><i class="material-icons" data-toggle="tooltip" title="Back To Top" data-placement="top" style="font-size:28px;color:white; z-index: 888;">arrow_upward</i></button>
+</div>
+  <script>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+<!--tombolup-->
+
+
+
+  <nav class="Navtop-mobile animated fadeIn" id="navbar" style="z-index: 999; background:#fff!important; color:black!important;" > <!-- Tambahkan class Navtop-mobile dan animated fadeIn pada navbar -->
+    <div class="navbar-container">
+        <!-- Logo dan Title di Sebelah Kiri -->
+        <div class="navbar-left">
+            <a class="navbar-brand" href="#" data-toggle="tooltip" title="Travelang" data-placement="top">
+                <img src="gambar/logo.png" alt="Logo" width="40" height="40" >
+            </a>
+            <h2 class="navbar-tit" style="color:black!important;">Travelang</h2>
+        </div>
+        <!-- Foto Profile Picture di Sebelah Kanan -->
+        <div class="navbar-right">
+            <a href="signup.html">
+                <img src="gambar/avatar.png" alt="Profile Picture" class="profile-picture"  data-toggle="tooltip" title="Account" data-placement="top">
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+<header class="navbar-mobile fixed-bottom " id="header" style="z-index: 999;">
+  <nav class="nav container">
+    <div class="nav__menu " id="nav-menu">
+      <ul class="nav__list ml-auto"> 
+        <li class="nav__item">
+          <a href="index.html" class="nav__link active-link animate__animated animate__fadeIn"  data-toggle="tooltip" title="Home" data-placement="top">
+            <i class='fas fa-home nav__icon'></i>
+            <span class="nav__name">Home</span>
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#about" class="nav__link animate__animated animate__fadeIn" data-toggle="tooltip" title="About" data-placement="top">
+            <i class='fas fa-user nav__icon'></i>
+            <span class="nav__name">About</span>
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#services" class="nav__link animate__animated animate__fadeIn"  data-toggle="tooltip" title="Services" data-placement="top">
+            <i class='fas fa-cog nav__icon'></i>
+            <span class="nav__name">Services</span>
+          </a>
+        </li>
+
+        <!-- Menambahkan kelas animate__animated dan animate__fadeIn ke elemen di atas untuk menambahkan animasi fadeIn -->
+        
+        <!-- tambahkan kode animasi ke elemen yang diinginkan dengan menambahkan kelas animate__animated dan kelas animasi yang diinginkan (misal: animate__fadeIn, animate__bounce, dll.) -->
+        
+        <li class="nav__item">
+          <a href="#contact" class="nav__link animate__animated animate__fadeIn"  data-toggle="tooltip" title="Contact" data-placement="top">
+            <i class='fas fa-envelope nav__icon'></i>
+            <span class="nav__name">Contact</span>
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#destinasi" class="nav__link animate__animated animate__fadeIn"  data-toggle="tooltip" title="Destination" data-placement="top">
+            <i class='fas fa-plane nav__icon'></i>
+            <span class="nav__name">Destination</span>
+          </a>
+        </li>
+
+        <li class="nav__item dropdown dropup">
+          <a href="#" class="nav__link animate__animated animate__fadeIn" id="moreDropdownToggle"  data-bs-toggle="dropdown" data-toggle="tooltip" title="More" data-placement="top" >
+            <i class='fas fa-ellipsis-h nav__icon'></i>
+            <span class="nav__name">More</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="moreDropdownToggle" style="top: auto; bottom: 100%;">
+            <a href="#ga1n" class="dropdown-item animate__animated animate__fadeIn">Gallery</a>
+            <a href="booking.html" class="dropdown-item animate__animated animate__fadeIn">Booking</a>
+        
+            <a href="#testi" class="dropdown-item animate__animated animate__fadeIn">Testimonial</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<!-- Navbar -->
+
+<!-- End Navbar -->
+
+
+
+<header class="navbar-desk navbar navbar-expand-lg navbar-light sticky-top animated fadeIn" style="background-color: white ;  z-index:999;">
+  <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
+    <div class="d-flex align-items-center">
+      <a href="" class="navbar-brand p-0 me-0 me-lg-2 d-flex align-items-center" >
+        <img src="gambar/logo.png" alt="Logo" style="max-height: 50px;" class="d-block my-1" viewBox="0 0 118 94" role="img" data-toggle="tooltip" title="Travelang" data-placement="top">
+        <h2 class="navbar-title m-0 " style="color: black!important;"  >Travelang</h2>
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; top: 0; right: 0; transform: translateY(50%); margin-top: 0.2rem; margin-right:1rem;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav flex-row flex-wrap bd-navbar-nav ms-auto py-0">
+        <!-- Menambahkan element div untuk profil picture -->
+        
+        <a href="index.html" class="nav-link active nav-item col-6 col-lg-auto" style="color: #000000;">Home</a>
+        <a href="#about" class="nav-item col-6 col-lg-auto nav-link" style="color: #000000;">About</a>
+        <a href="#service" class="nav-item col-6 col-lg-auto nav-link" style="color: #000000;">Services</a>
+        <a href="#contact" class="nav-item nav-link" style="color: #000000;">Contact</a>
+        <a href="#destinasi" class="nav-item nav-link" style="color: #000000;">Destination</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #000000;">More <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-menu m-0">
+            <a href="#ga1n" class="dropdown-item">Gallery</a>
+            <a href="booking.html" class="dropdown-item">Booking</a>
+         
+            <a href="#testi" class="dropdown-item">Testimonial</a>
+          </div>
+        </div>
+        <div class="nav-item profile-picture">
+          <a href="signup.html">
+
+            <img src="gambar/avatar.png" alt="Profile Picture" style="max-height: 50px;" class="d-block rounded-circle my-1" data-toggle="tooltip" title="Account" data-placement="bottom">
+       </a>
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    
+        <div class="carousel-wrapper" id="home">
+          <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel" style="margin-bottom: 50px; z-index:1;">
+        
+            <!-- Indicators/dots -->
+           
+            
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner ">
+              <div class="carousel-item active ">
+                
+        
+        <div class="container-fluid bg-primary py-5 mb-5 hero" style=" background-size: contain;
+        background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gambar/hero1.jpg'); background-size: cover; background-position: center;  max-height :60%; margin-top: -78px;
+         box-shadow: 0 25px 50px #CFDEF3;" >
+          <div class="container py-5">
+            <div class="row justify-content-center py-5">
+              <div class="col-lg-20 pt-lg-5 mt-lg-5 text-center hero-text">
+                
+                <h1 class="title display-5 text-white mb-2 animated fadeInDown">Selamat Datang di <span id="typed1" style="color: #00E194; letter-spacing:4px; font-weight:600;"></span></h1>
+                <p class="subtitle fs-5 text-white mb-4 animated fadeInUp">Nikmati keindahan alam, budaya, dan keajaiban dunia dengan pengalaman perjalanan tak terlupakan bersama paket wisata impian kami.</p>    
+                <div class="social-media-icons mt-5">
+                  <a href="https://www.instagram.com/" target="_blank"><i class="icofont-instagram text-white me-3"></i></a>
+                  <a href="https://www.facebook.com/" target="_blank"><i class="icofont-facebook text-white me-3"></i></a>
+                  <a href="https://twitter.com/" target="_blank"><i class="icofont-twitter text-white"></i></a>
+                </div>
+               <a href="booking.html">
+                <button type="button"  class="sub-btn btn btn-lg btn-primary rounded-pill py-2 px-4 mt-5  "data-toggle="tooltip" title="Berlangganan" style="background-color: #02cc85; border-style:none; z-index: 1;  box-shadow: 0 5px 10px #000000dd ; width: 200px; height:55px ; 
+                transition: box-shadow 0.3s ease-in-out;">
+              
+                  Booking
+                </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+              </div>
+              <div class="carousel-item">
+               
+        
+        <div class="container-fluid bg-primary py-5 mb-5 hero" style=" background-size: contain;
+        background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gambar/hero2.jpg'); background-size: cover; background-position: center;   max-height :60%; margin-top: -78px;
+         box-shadow: 0 25px 50px #CFDEF3;" >
+          <div class="container py-5">
+            <div class="row justify-content-center py-5">
+              <div class="col-lg-20 pt-lg-5 mt-lg-5 text-center hero-text">
+                
+                <h1 class="title display-5 text-white mb-2 animated fadeInDown">Selamat Datang di <span id="typed2" style="color: #00E194; letter-spacing:4px; font-weight:600;"></span></h1>
+                <p class="subtitle fs-5 text-white mb-4 animated fadeInUp">Nikmati keindahan alam, budaya, dan keajaiban dunia dengan pengalaman perjalanan tak terlupakan bersama paket wisata impian kami.</p>
+                <div class="social-media-icons mt-5">
+                  <a href="https://www.instagram.com/" target="_blank"><i class="icofont-instagram text-white me-3"></i></a>
+                  <a href="https://www.facebook.com/" target="_blank"><i class="icofont-facebook text-white me-3"></i></a>
+                  <a href="https://twitter.com/" target="_blank"><i class="icofont-twitter text-white"></i></a>
+                </div>
+                <a href="#top">
+                <button type="button" class="sub-btn btn btn-lg btn-primary rounded-pill py-2 px-4 mt-5  "data-toggle="tooltip" title="Berlangganan" data-placement="top" style="background-color: #02cc85; border-style:none; z-index: 1;  box-shadow: 0 5px 10px #000000dd ; width: 200px; height:55px ; 
+                transition: box-shadow 0.3s ease-in-out;">
+                  Top Destinasi
+                </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+              </div>
+              <div class="carousel-item">
+                
+                <div class="container-fluid bg-primary py-5 mb-5 hero" style=" background-size: contain;
+                background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gambar/hero3.jpg'); background-size: cover; background-position: center;   max-height :60%; margin-top: -78px;
+                 box-shadow: 0 25px 50px #CFDEF3;" >
+                  <div class="container py-5">
+                    <div class="row justify-content-center py-5">
+                      <div class="col-lg-20 pt-lg-5 mt-lg-5 text-center hero-text">
+                        
+                        <h1 class="title display-5 text-white mb-2 animated fadeInDown">Selamat Datang di <span id="typed3" style="color: #00E194; letter-spacing:4px; font-weight:600;"></span></h1>
+                        <p class="subtitle fs-5 text-white mb-4 animated fadeInUp">Nikmati keindahan alam, budaya, dan keajaiban dunia dengan pengalaman perjalanan tak terlupakan bersama paket wisata impian kami.</p>
+                        <div class="social-media-icons mt-5">
+                          <a href="https://www.instagram.com/" target="_blank"><i class="icofont-instagram text-white me-3"></i></a>
+                          <a href="https://www.facebook.com/" target="_blank"><i class="icofont-facebook text-white me-3"></i></a>
+                          <a href="https://twitter.com/" target="_blank"><i class="icofont-twitter text-white"></i></a>
+                        </div>
+                        
+                        <button type="button" class="sub-btn btn btn-lg btn-primary rounded-pill py-2 px-4 mt-5  "data-toggle="tooltip" title="Berlangganan" data-placement="top" data-bs-toggle="modal" data-bs-target="#myModal" style="background-color: #02cc85; border-style:none; z-index: 1;  box-shadow: 0 5px 10px #000000dd ; width: 200px; height:55px ; 
+                        transition: box-shadow 0.3s ease-in-out;">
+                          Berlangganan
+                        </button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+        
+          </div>
+          
+         
+        
+      </div>
+  
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+<section class="case-study-about " style="padding-bottom: 140px; ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title-about" data-aos="fade-right" id="about">
+          <h2>
+            <center>
+              <br>
+           About
+           </center>
+          </h2>
+        </div>
+  
+          <div class="row g-5">
+              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+               
+
+                    <section class="gallary">
+                      <div class="section__container gallary__container">
+                        <div class="image__gallary">
+                          <div class="gallary__col">
+                            <img src="gambar/Traveler1.jpg" alt="gallary" />
+                          </div>
+                          <div class="gallary__col">
+                            <img src="gambar/hero4.jpg" alt="gallary" />
+                            <img src="gambar/gallery-3.jpg" alt="gallary" />
+                          </div>
+                        </div>
+                      
+                      </div>
+                    </section>
+                      
+              </div>
+  
+              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+              
+                  <h1 class="mb-4">Selamat datang di <span style="color: #00E194; letter-spacing:3px; font-weight:600;">Travelang</span></h1>
+                  <p class="mb-4" style="text-align: justify;"> platform online yang didedikasikan untuk menjelajahi keindahan dunia melalui Traveling. Kami adalah tim para pecinta wisata yang bersemangat, yang ingin berbagi pengalaman dan pengetahuan kami dengan Anda.</p>
+                  <p class="mb-4" style="text-align: justify;">Selain menyediakan informasi tentang destinasi perjalanan di seluruh dunia, kami juga memberikan tips dan panduan perjalanan berguna untuk memudahkan perjalanan Anda. Kami berkomitmen untuk menyajikan konten yang beragam dan inklusif, sehingga Anda dapat menemukan informasi yang sesuai dengan preferensi perjalanan Anda. Dengan tim yang berpengalaman dan berpengetahuan luas di bidang traveling, kami siap membantu Anda merencanakan perjalanan yang tak terlupakan. </p>
+                  <div class="row gy-2 gx-4 mb-4">
+                      <div class="col-sm-6">
+                          <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #00E194!important;"></i>First Class Flights</p>
+                      </div>
+                      <div class="col-sm-6">
+                          <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #00E194!important;"></i>Informasi Cuaca yang akurat</p>
+                      </div>
+                      <div class="col-sm-6">
+                          <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #00E194!important;"></i>Kemudahan dalam Pemesanan</p>
+                      </div>
+                      <div class="col-sm-6">
+                          <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #00E194!important;"></i>Informasi Lengkap</p>
+                      </div>
+                      <div class="col-sm-6">
+                          <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"style="color: #00E194!important;"></i>Harga Kompetitif</p>
+                      </div>
+                      <div class="col-sm-6">
+                          <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"style="color: #00E194!important;"></i>24 Jam Servis</p>
+                      </div>
+                  </div>
+                  <a class="btn btn-primary py-3 px-5 mt-2" href="" style="background-color: #00E194;
+                  color: #fff;
+                  font-weight: 700;
+                  border: none;
+                  padding: 20px 20px;
+                  border-radius: 5px;
+                  cursor: pointer;">Read More</a>
+              </div>
+          </div>
+  
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+<Br>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+<section class="case-study service" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+       
+
+      <div class="text-center">
+        <div class="title-about" data-aos="fade-right" id="service">
+          <h2>
+            <center>
+              <br>
+         Service
+           </center>
+          </h2>
+        </div>
+        <br>
+      <br>
+     </div>
+      
+      <div class="row justify-content-center">
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="icofont-snowy-thunder-sunny"></i>
+            </div>
+            <h3 class="ser-text">Layanan Informasi Cuaca</h3>
+            <p class="ser-text">Dapatkan info cuaca akurat dengan layanan informasi kami untuk aktivitas liburan yang lebih baik.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="icofont-travelling"></i>
+            </div>
+            <h3  class="ser-text">Layanan Paket Wisata</h3>
+            <p  class="ser-text">
+              Nikmati liburan  tak terlupakan dengan paket wisata menarik, terjangkau, dan berkualitas.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="icofont-car"></i>
+            </div>
+            <h3  class="ser-text">Layanan Sewa Kendaraan</h3>
+            <p  class="ser-text">
+              Jelajahi destinasi dengan nyaman, harga terbaik, dan fleksibel dengan layanan sewa kendaraan kami.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="icofont-shield"></i>
+            </div>
+            <h3  class="ser-text">Layanan Asuransi</h3>
+            <p  class="ser-text">
+              Pastikan liburan Anda aman dan terlindungi dari berbagai risiko dengan layanan asuransi kami.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="icofont-air-ticket"></i>
+            </div>
+            <h3 class="ser-text">Layanan Booking Cepat</h3>
+            <p  class="ser-text">
+              Pesan tiket pesawat, dan aktivitas liburan dengan mudah dan cepat melalui layanan booking kami.
+            </p>
+
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="icofont-eye"></i>
+            </div>
+            <h3  class="ser-text">Layanan Privasi</h3>
+            <p  class="ser-text">
+              Privasi, informasi, dan keamanan transaksi online Anda adalah prioritas Keamanan kami.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <section class="game-section " style="background:#001122;">
+    <div class="text-center">
+      <div class="title-about" data-aos="fade-right" id="top">
+        <h2 style="color:#fff;">
+          <center>
+            <br>
+       Top Destinasi
+         </center>
+        </h2>
+      </div>
+      <br>
+    <br>
+   </div>
+    <div class="owl-carousel custom-carousel owl-theme">
+      <div class="item active" style="background-image: url(gambar/top1.jpg);">
+        <div class="item-desc">
+     
+          <h3>London</h3>
+          <p>London adalah kota yang hidup dan kosmopolitan yang menggabungkan sejarah dengan modernitas. Dari landmark ikonik seperti Big Ben dan Menara London hingga museum-museum dunia dan pasar ramai, London menawarkan perpaduan unik antara budaya, seni, dan pengalaman kuliner yang beragam. Jelajahi jalan-jalan menawan di Covent Garden, nikmati belanja mewah di Oxford Street, atau berjalan-jalan santai di tepi Sungai Thames yang indah. London benar-benar menghadirkan pengalaman yang tak terlupakan.</p>
+     
+        </div>
+      </div>
+      <div class="item" style="background-image: url(gambar/top2.jpg);">
+        <div class="item-desc">
+          <h3>Roman</h3>
+          <p>Roma adalah kota kuno yang penuh dengan warisan sejarah. Menyusuri jalanan kota ini, Anda akan menemukan Colosseum yang megah, Kuil Pantheon yang indah, dan Sistine Chapel yang mengagumkan di Vatikan. Rasakan keajaiban arsitektur klasik dan kelezatan kuliner Italia yang autentik. Dengan keindahan dan kekayaannya, Roma mengundang Anda untuk merasakan keajaiban zaman dahulu yang masih hidup hingga hari ini</p>
+    
+        </div>
+      </div>
+      <div class="item" style="background-image: url(gambar/top3.jpg);">
+        <div class="item-desc">
+          <h3>Paris</h3>
+          <p>Paris, kota cinta dan keindahan, menyuguhkan pesona yang tak terlupakan. Menara Eiffel yang ikonis, Louvre yang mengagumkan, dan Champs-Élysées yang elegan adalah beberapa daya tarik utama yang harus dikunjungi. Nikmati kuliner lezat, pesta mode, dan seni yang tiada duanya di kota ini. Jalan-jalan di sepanjang Sungai Seine atau menjelajahi Montmartre yang romantis akan memberikan pengalaman yang tak terlupakan di Paris.</p>
+       
+        </div>
+      </div>
+      <div class="item" style="background-image: url(gambar/top4.jpg);">
+        <div class="item-desc">
+          <h3>Raja Ampat</h3>
+          <p>Raja Ampat adalah surga tropis di Indonesia yang terkenal dengan keindahan alam bawah lautnya. Terdiri dari berbagai pulau-pulau kecil yang indah, Raja Ampat menawarkan terumbu karang spektakuler, kehidupan laut yang melimpah, dan pantai berpasir putih yang memukau. Menyelam, snorkeling, atau sekadar bersantai di pantai, Anda akan terpesona oleh kekayaan alam yang menakjubkan di Raja Ampat.</p>
+       
+        </div>
+      </div>
+      <div class="item" style="background-image: url(gambar/top5.jpg);">
+        <div class="item-desc">
+          <h3>Jepang</h3>
+          <p>Jepang adalah negara yang unik dan memikat dengan perpaduan antara tradisi dan teknologi modern. Nikmati keindahan kebun-kebun bunga di musim sakura, jelajahi kota Tokyo yang futuristik, atau kunjungi kuil-kuil bersejarah di Kyoto. Selain itu, Jepang juga terkenal dengan makanan lezat seperti sushi dan ramen yang menjadi kegemaran banyak orang. Jepang menawarkan pengalaman yang kaya budaya dan penghormatan terhadap masa lalu.</p>
+      
+        </div>
+      </div>
+      <div class="item" style="background-image: url(gambar/top6.jpg);">
+        <div class="item-desc">
+          <h3>Bali</h3>
+          
+          <p>Bali adalah pulau surga di Indonesia yang menawarkan keindahan alam yang memukau dan budaya yang kaya. Pantai-pantai indah seperti Kuta, Ubud yang terkenal dengan seni dan kehidupan spiritual, serta pura-pura yang megah adalah beberapa daya tarik utama Bali. Nikmati matahari terbenam yang menakjubkan, pijat tradisional Bali, dan kelezatan masakan lokal. Bali adalah tempat yang sempurna untuk bersantai dan menemukan kedamaian dalam keindahan alamnya.</p>
+        
+        </div>
+      </div>
+      <div class="item" style="background-image: url(gambar/top7.jpg);">
+        <div class="item-desc">
+          <h3>China</h3>
+          <p>China adalah negara dengan sejarah dan budaya yang luar biasa. Dari Tembok Besar yang ikonis hingga kota-kota metropolitan seperti Shanghai, China menawarkan pengalaman yang tak terlupakan. Jelajahi kuil-kuil kuno, taman-taman yang indah, dan citra modern yang futuristik. Tidak lupa, nikmati masakan China yang terkenal di seluruh dunia. China adalah tempat yang menakjubkan untuk menyaksikan keajaiban masa lalu dan masa kini yang bersatu.</p>
+         
+        </div>
+      </div>
+      <div class="item" style="background-image: url(gambar/top8.jpg);">
+        <div class="item-desc">
+          <h3>Arab</h3>
+          <p>Arab adalah kawasan yang dipenuhi dengan kekayaan budaya dan sejarah yang luar biasa. Dari menara tinggi di Dubai hingga keajaiban alam di Gurun Sahara, Arab menawarkan keindahan yang mengagumkan. Nikmati keramahan orang Arab, jelajahi pasar-pasar tradisional yang ramai, dan rasakan pesona kehidupan gurun yang eksotis. Arab adalah tempat yang menawarkan pengalaman unik dan mempesona.</p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(gambar/top9.jpg);">
+        <div class="item-desc">
+          <h3>Korea Selatan</h3>
+          <p>Korea Selatan adalah negara yang mencampurkan tradisi dengan teknologi modern. Dari istana-istana yang megah di Seoul hingga keindahan alam di Jeju Island, Korea Selatan menawarkan pengalaman yang beragam. Jelajahi gerbang gerbang Gyeongbokgung Palace, nikmati makanan lezat seperti bibimbap dan kimchi, atau nikmati budaya K-pop yang sedang populer di seluruh dunia. Korea Selatan adalah tempat yang penuh warna dan kehidupan yang tak terlupakan.</p>
+        
+        </div>
+      </div>
+      <div class="item" style="background-image: url(gambar/top10.jpg);">
+        <div class="item-desc">
+          <h3>Amsterdam</h3>
+          <p>Amsterdam adalah kota yang indah dan bersejarah di Belanda yang terkenal dengan kanal-kanalnya yang ikonik. Menyusuri jalan-jalan di pusat kota Amsterdam, Anda akan menemukan bangunan-bangunan bersejarah, museum-museum terkenal seperti Van Gogh Museum, dan taman-taman yang indah. Nikmati suasana santai di kafe-kafe khas Amsterdam atau jelajahi kehidupan malam yang meriah. Amsterdam adalah tempat yang menawan dan memikat hati setiap pengunjung.</p>
+        
+        </div>
+      </div>
+      
+    </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content animate-modal">
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="container-sub">
+          <div class="container-sub-close" data-bs-dismiss="modal">&times;</div>
+          <img src="gambar/sub.jpg" alt="image">
+          <div class="container-sub-text">
+            <h2>"Berlangganan untuk penawaran terbaik,<br> langsung ke inbox Anda!</h2>
+            <p>Daftar untuk menerima ide perjalanan,<br> Paket Adventure dengan diskon 15% untuk semua destinasi<br> Travelang
+            </p>
+            <form action="">
+              <input class="input-sub" type="email" id="email" name="email" placeholder="Email address">
+              <input class="button-sub" type="submit" name="submit" value="Subscribe" />
+              <span>No spams included</span>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+<!-- rating -->
+ <div class="container rounded testinu" style="  background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url('gambar/testi.jpg');
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;"> 
+  <div class="d-flex justify-content-center ">
+    <div class="text-center">
+      <div class="title-about" data-aos="fade-right" id="testi">
+        <h2 style="color: #fff!important;">
+          <center>
+            <br>
+       Testimonial
+         </center>
+        </h2>
+      </div>
+      <br>
+    <br>
+   </div>
+ </div> 
+  <div class="test owl-carousel owl-theme">
+     <div class="owl-item">
+       <div class="card d-flex flex-column"> 
+        <div class="mt-2">
+           <span class="fas fa-star active-star"></span>
+           <span class="fas fa-star active-star"></span> 
+           <span class="fas fa-star active-star"></span> 
+           <span class="fas fa-star active-star"></span> 
+           <span class="fas fa-star-half-alt active-star"></span> 
+          </div> 
+    <div class="main tjudul font-weight-bold pb-2 pt-1">Layanan Terbaik</div> 
+    <div class="testimonial" style="text-align: justify;">Sudah 6 bulan Saya menggunakan Travelang untuk melakukan Traveling ke berbagai negara dan selama 6 bulan itu semuanya berjalan lancar tanpa ada masalah dan saya merasa sangat mudah untuk memesan tiket👌 </div> 
+    <div class="d-flex flex-row profile pt-4 mt-auto"> 
+      <img src="gambar/t1.jpg" alt="" class="rounded-circle"> 
+      <div class="d-flex flex-column pl-2"> 
+        <div class="name">Yosu Christian</div>
+     
+        </div>
+       </div> 
+      </div>
+     </div>
+     <div class="owl-item">
+      <div class="card d-flex flex-column"> 
+       <div class="mt-2">
+          <span class="fas fa-star active-star"></span>
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+         </div> 
+   <div class="main tjudul font-weight-bold pb-2 pt-1">Layanan Terbaik</div> 
+   <div class="testimonial">Harga yang ditawarkan sangat terjangkau dan Servicesnya adalah yang terbaik😍 </div> 
+   <div class="d-flex flex-row profile pt-4 mt-auto"> 
+       <img src="gambar/t2.jpg" alt="" class="rounded-circle"> 
+            <div class="d-flex flex-column pl-2"> 
+       <div class="name">Amanda </div>
+ 
+       </div>
+      </div> 
+     </div>
+    </div>
+    <div class="owl-item">
+      <div class="card d-flex flex-column"> 
+       <div class="mt-2">
+          <span class="fas fa-star active-star"></span>
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star-half-alt active-star"></span> 
+         </div> 
+   <div class="main tjudul font-weight-bold pb-2 pt-1">Layanan Terbaik</div> 
+   <div class="testimonial">Sistemnya sangat mudah digunakan dan saya menemukan tiket pesawat dengan harga yang sangat terjangkau. 👍 </div> 
+   <div class="d-flex flex-row profile pt-4 mt-auto"> 
+    <img src="gambar/t3.jpg" alt="" class="rounded-circle">      <div class="d-flex flex-column pl-2"> 
+       <div class="name">Kevin</div>
+     
+       </div>
+      </div> 
+     </div>
+    </div>
+    <div class="owl-item">
+      <div class="card d-flex flex-column"> 
+       <div class="mt-2">
+          <span class="fas fa-star active-star"></span>
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+         </div> 
+   <div class="main tjudul font-weight-bold pb-2 pt-1">Layanan Terbaik</div> 
+   <div class="testimonial"> Informasi yang tersedia di website ini sangat membantu saya dalam memilih tempat wisata dan aktivitas selama perjalanan saya. Saya tidak perlu lagi mencari di berbagai website atau membaca banyak artikel. </div> 
+   <div class="d-flex flex-row profile pt-4 mt-auto"> 
+    <img src="gambar/t4.jpg" alt="" class="rounded-circle">      <div class="d-flex flex-column pl-2"> 
+       <div class="name">Ciko</div>
+       
+
+
+       </div>
+      </div> 
+     </div>
+    </div>
+    <div class="owl-item">
+      <div class="card d-flex flex-column"> 
+       <div class="mt-2">
+          <span class="fas fa-star active-star"></span>
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star-half-alt active-star"></span> 
+         </div> 
+   <div class="main tjudul font-weight-bold pb-2 pt-1">Layanan Terbaik</div> 
+   <div class="testimonial">Saya sangat merekomendasikan website traveling ini kepada siapa saja yang ingin merencanakan perjalanan mereka. Selain mudah digunakan, website ini juga memberikan informasi yang akurat dan pilihan yang banyak. </div> 
+   <div class="d-flex flex-row profile pt-4 mt-auto"> 
+    <img src="gambar/t5.jpg" alt="" class="rounded-circle">      <div class="d-flex flex-column pl-2"> 
+       <div class="name">Joshua</div>
+     
+       </div>
+      </div> 
+     </div>
+    </div>
+
+
+
+    <div class="owl-item">
+      <div class="card d-flex flex-column"> 
+       <div class="mt-2">
+          <span class="fas fa-star active-star"></span>
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+          <span class="fas fa-star active-star"></span> 
+         </div> 
+   <div class="main tjudul font-weight-bold pb-2 pt-1">Layanan Terbaik</div> 
+   <div class="testimonial">Tidak perlu diragukan lagi untuk memilih website ini sebagai tempat untuk membantu traveling, Saya sudah 4kali melakukan traveling dan hasilnya sanagt memuaskan dan tentunya aman. 👍👍</div> 
+   <div class="d-flex flex-row profile pt-4 mt-auto"> 
+    <img src="gambar/t6.jpg" alt="" class="rounded-circle">      <div class="d-flex flex-column pl-2"> 
+       <div class="name">Hariyanto</div>
+     
+       </div>
+      </div> 
+     </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </div>
+     </div>
+     <br>
+     <br>
+     <br>
+
+
+  <div class="container-xxl py-5" style="background: #fff; border-radius: 15px;" >
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <div class="text-center">
+            <div class="title-about" data-aos="fade-right">
+              <h2>
+                <center>
+                  <br>
+             Paket Special Promo
+               </center>
+              </h2>
+            </div>
+            <br>
+          <br>
+         </div>
+       
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="package-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="gambar/1.png" alt="">
+                    </div>
+                    <div class="d-flex border-bottom">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2" style="color: #00E194;"></i>Tokyo</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt  me-2" style="color: #00E194;"></i>6 Hari</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-user me-2" style="color: #00E194;"></i>2 Orang</small>
+                    </div>
+                    <div class="text-center p-4">
+                        <h3 class="mb-0" style=" color: #00E194; font-weight:700; " ><span style="font-size: 1.5rem; color: #000000; font-weight:700; letter-spacing: 2px; ">IDR</span><del style="color:red!important;
+                        font-size: 1.3rem; font-weight:500;  font-style: italic; "> 14.550.000</del> 10.912.500</h3>
+                        <div class="mb-3">
+                          <span class="fas fa-star active-star"></span>
+                          <span class="fas fa-star active-star"></span> 
+                          <span class="fas fa-star active-star"></span> 
+                          <span class="fas fa-star active-star"></span> 
+                          <span class="fas fa-star active-star"></span> 
+                        </div>
+                        <p>Promo Paket Liburan Jepang 6 Hari 5 Malam Termasuk Hotel</p>
+                        <div class="d-flex justify-content-center mb-2">
+                          <button href="#" class="btn btn-sm btn-primary px-3 border-end btn-info" data-bs-toggle="modal" data-bs-target="#pack1" style="border-radius: 30px 0 0 30px;  background: #00E194; border:none; color:#fff;">Detail</button>
+                          <a href="booking.html"> <button href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;  background: #00E194; border:none;">Booking</button></a>
+                 </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="package-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="gambar/2.png" alt="">
+                    </div>
+                    <div class="d-flex border-bottom">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt  me-2"  style="color: #00E194;"></i>Bali</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"  style="color: #00E194;"></i>4 Hari</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"  style="color: #00E194;"></i>2 Orang</small>
+                    </div>
+                    <div class="text-center p-4">
+                      <h3 class="mb-0" style=" color: #00E194; font-weight:700; " ><span style="font-size: 1.5rem; color: #000000; font-weight:700; letter-spacing: 2px; ">IDR</span><del style="color:red!important;
+                        font-size: 1.3rem; font-weight:500;  font-style: italic; "> 2.895.500</del> 2.026.850</h3>
+                        <div class="mb-3">
+                          <span class="fas fa-star active-star"></span>
+                          <span class="fas fa-star active-star"></span> 
+                          <span class="fas fa-star active-star"></span> 
+                          <span class="fas fa-star active-star"></span> 
+                          <span class="fas fa-star active-star"></span> 
+                        </div>
+                        <p>Promo Paket Liburan Bali 4 Hari 3 Malam Termasuk Hotel Dan Tour Nusa Penida</p>
+                        <div class="d-flex justify-content-center mb-2">
+                            <button href="#" class="btn btn-sm btn-primary px-3 border-end btn-info" data-bs-toggle="modal" data-bs-target="#pack2" style="border-radius: 30px 0 0 30px;  background: #00E194; border:none; color:#fff;">Detail</button>
+                            <a href="booking.html">  <button href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;  background: #00E194; border:none;">Booking</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="package-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="gambar/3.png" alt="">
+                    </div>
+                    <div class="d-flex border-bottom">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt  me-2"  style="color: #00E194;"></i>Paris</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"  style="color: #00E194;"></i>3 Hari</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"  style="color: #00E194;"></i>2 Orang</small>
+                    </div>
+                    <div class="text-center p-4">
+                      <h3 class="mb-0" style=" color: #00E194; font-weight:700; " ><span style="font-size: 1.5rem; color: #000000; font-weight:700; letter-spacing: 2px; ">IDR</span><del style="color:red!important;
+                        font-size: 1.3rem; font-weight:500;  font-style: italic; "> 17.900.000</del> 13.425.000</h3>
+                        <div class="mb-3">
+                          <span class="fas fa-star active-star"></span>
+                          <span class="fas fa-star active-star"></span> 
+                          <span class="fas fa-star active-star"></span> 
+                          <span class="fas fa-star active-star"></span> 
+                          <span class="fas fa-star-half-alt active-star"></span> 
+                        </div>
+                        <p>Promo Paket Liburan Paris 3 Hari 2 Malam Termasuk Hotel</p>
+                        <div class="d-flex justify-content-center mb-2">
+                          <button href="#" class="btn btn-sm btn-primary px-3 border-end btn-info" data-bs-toggle="modal" data-bs-target="#pack3" style="border-radius: 30px 0 0 30px;  background: #00E194; border:none; color:#fff;">Detail</button>
+                          <a href="booking.html"><button href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;  background: #00E194; border:none;">Booking</button></a><
+                 </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+
+<div class="modal fade" id="pack2">
+  <div class="modal-dialog modal-lg" style="background: #ffffff;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="gambar/2.png" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p align="left"><font size="4" face="Arial, Helvetica, sans-serif" color="#006699">Promo Paket Liburan Bali 4 Hari 3 Malam Termasuk Hotel Dan Tour Nusa Penida </font></p>
+               <br>
+        <br>
+        <div class="itinerary-container">
+          <h2>Hari 1: Penjemputan di Bandara Ngurah Rai + Tour Setengah Hari ke Bali Selatan</h2>
+          <p>Perjalanan akan dimulai dengan penjemputan di Bandara Ngurah Rai. Kemudian, Anda akan melakukan tour setengah hari ke Bali Selatan. Destinasi wisata yang akan dikunjungi antara lain Pantai Melasti atau Pantai Pandawa, serta Uluwatu. Hari ini diakhiri dengan makan malam romantis di Pantai Jimbaran.</p>
+      
+          <h2>Hari 2: Nusa Penida Tour</h2>
+          <p>Pagi ini, Anda akan dijemput dari hotel dan diantar ke pelabuhan Sanur untuk naik fast boat menuju Nusa Penida. Setelah tiba di Nusa Penida, Anda akan memulai tour mengunjungi Pantai Kelingking, Broken Beach, Angel Billabong, dan Pantai Crystal Bay. Kemudian, Anda akan kembali ke Bali dan diantar kembali ke hotel dengan acara bebas.</p>
+      
+          <h2>Hari 3 Option I: Tour ke Bedugul, Handara Gate atau Bloom Garden, La Brisa Canggu atau Pantai Seminyak</h2>
+          <p>Pagi hari ini, setelah sarapan di hotel, Anda akan dijemput untuk memulai jadwal tour ke Bedugul. Destinasi wisata yang akan dikunjungi antara lain Pura Ulun Danu Beratan, Handara Gate atau Bloom Garden. Selanjutnya, Anda dapat menikmati suasana pantai dan sunset di Beach Club La Brisa Canggu atau Pantai Seminyak sebelum kembali ke hotel.</p>
+      
+          <h2>Hari 3 Option II: Desa Penglipuran + Kintamani + Tegalalang + Air Terjun Tegenungan</h2>
+          <p>Pagi ini, setelah sarapan di hotel, Anda akan dijemput untuk memulai jadwal tour ke Desa Penglipuran. Kemudian, perjalanan dilanjutkan ke Kintamani, Tegalalang, dan Air Terjun Tegenungan. Anda juga akan mengunjungi kebun kopi sebelum kembali ke hotel di malam hari.</p>
+      
+          <h2>Hari 4: Tour Tanah Lot + Belanja Oleh oleh Krisna / Joger + Antar ke Bandara Ngurah Rai</h2>
+          <p>Pagi hari ini, setelah sarapan di hotel, Anda akan melakukan tour ke Tanah Lot. Jadwal penjemputan akan disesuaikan dengan jadwal penerbangan pulang Anda. Selanjutnya, Anda akan berbelanja oleh-oleh di Krisna atau Joger sebelum diantar ke Bandara Ngurah Rai. Paket tour 4 hari 3 malam selesai.</p>
+        </div>
+</div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="pack1">
+  <div class="modal-dialog modal-lg" style="background: #ffffff;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="gambar/1.png" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p align="left"><font size="4" face="Arial, Helvetica, sans-serif" color="#006699">Promo Paket Liburan Bali 4 Hari 3 Malam Termasuk Hotel Dan Tour Nusa Penida </font></p>
+               <br>
+        <br>
+        <div class="itinerary-container">
+          <h2>Hari Pertama Wisata Jepang</h2>
+          <p>10 Juli 2022 - Paket Wisata Jepang: Perjalanan akan dimulai dengan berkumpul 3 jam sebelum waktu keberangkatan di terminal 3 bandara Soekarno Hatta Cengkareng. Perjalanan akan ditempuh dalam waktu 7,5 Jam – 8 Jam Penerbangan Langsung. Para peserta akan bermalam dan makan dari Fasilitas yang disediakan Maskapai penerbangan Hingga tiba di bandara Haneda atau Narita Tokyo. Garuda Indonesia / All Nippon Airways / Japan Airlines.</p>
+        
+          <h2>Hari Kedua Wisata Jepang</h2>
+          <p>Wisata ke Asakusa Kanon Temple – Wisata ke Nakamise street – Wisata ke Donquehote – Wisata ke Akihabara – Check In. Public Transportation.</p>
+        
+          <h2>Hari Ketiga Wisata Jepang</h2>
+          <p>Wisata ke Imperial Pallace (Photostop) – Wisata ke Takashimaya Shopping Street – Wisata ke Japan Curency Museum – Wisata ke Ginza Kamurama & Wisata ke Plaza Ginza – Wisata ke Tokyo Tower Photo Stop – Back to Hotel. Public Transportation.</p>
+        
+          <h2>Hari Keempat Wisata Jepang</h2>
+          <p>Wisata ke Shukiji Market untuk menikmati Japan Traditional Cullinery – Wisata ke Shinjuku – Wisata ke Goverment Metropolitan Building Observation deck – Wisata ke Omotesando – Wisata ke Kiddy land – Wisata ke Meiji Jingu Temple – Back to Hotel. Public Transportation.</p>
+        
+          <h2>Hari Kelima Wisata Jepang</h2>
+          <p>Wisata ke Hakone – Menikmati Romance Car – dari Tokyo ke odawara, Mencoba Hakone tozan train to Gora Garden, Hakone tozan cable car (gora – sounzan), Hakone ropeway (sounzan – togendai), Hakone cruise (togedai – moto hakone), Back to Tokyo Hotel, Check in. Public Transportation.</p>
+        
+          <h2>Hari Keenam Wisata Jepang</h2>
+          <p>Hari ini peserta akan diantar ke bandara dan melanjutkan penerbangan kembali ke Indonesia. Sayonara. Arigato Gozaimas… Semoga Bapak Ibu dan Saudara-saudara diberi kesehatan maupun rejeki yang berlimpah serta umur yang panjang agar dapat bertemu kembali di lain kesempatan.</p>
+        </div>
+</div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="pack3">
+  <div class="modal-dialog modal-lg" style="background: #ffffff;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="gambar/3.png" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p align="left"><font size="4" face="Arial, Helvetica, sans-serif" color="#006699">Promo Paket Liburan Bali 4 Hari 3 Malam Termasuk Hotel Dan Tour Nusa Penida </font></p>
+               <br>
+        <br>
+        
+
+
+<div class="itinerary-container">
+  <h2>HARI KE 1 JAKARTA</h2>
+  <p>Kamu harus sudah ada di bandara Soekarno-Hatta minimal 4 jam sebelum check-in (21:40)</p>
+
+  <h2>HARI KE 2 JAKARTA – PARIS</h2>
+  <p>Penerbangan ke Paris (01:40) secara mandiri tanpa tour leader. Kamu juga akan sampai di hari yang sama. Welcome to Paris! Kamu akan dijemput di Bandara dan diantar menuju hotel.</p>
+
+  <h2>HARI KE 3 PARIS CITY TOUR – VERSAILLES – PARIS (B)</h2>
+  <p>Breakfast di hotel. Berwisata sightseeing dengan bus melihat Champs Elysees yang terkenal sampai Place de la Concorde, Arc de Triomphe. Kamu akan melihat bangunan bersejarah penting lainnya saat kamu menuju L’Hotel National des Invalides, di mana Makam Napoleon berada. Berhenti di Menara Eiffel kamu dapat meluangkan waktu untuk menjelajahi lingkungan dan makan siang atau eksplorasi Menara Eiffel. Menuju Istana Versailles yang indah. Kembali ke hotel.</p>
+
+  <h2>HARI KE 4 PARIS (B)</h2>
+  <p>Breakfast di hotel. Wisata di Paris melihat Museum Louvre (Free time). Kamu dapat masuk ke Museum Louvre (biaya pribadi) atau mengikuti pelayaran santai di sepanjang sungai Seine (biaya tambahan), Makan siang (biaya sendiri), Menuju area di sekitar Palais Garnier, gedung opera Paris, kamu memiliki pilihan untuk menikmati France 4 course Dinner (biaya tambahan) atau menghabiskan waktu berbelanja di department store legendaris di Galeries Lafayette. Kembali ke hotel.</p>
+
+  <h2>HARI KE 5 PARIS DEPARTURE (B)</h2>
+  <p>Breakfast di hotel. Pengantaran ke Bandara dan penerbangan kembali ke Jakarta.</p>
+
+  <h2>HARI KE 6 ARRIVAL JAKARTA</h2>
+  <p>Arrive Jakarta Soekarno-Hatta, See you next trip.</p>
+</div>
+
+
+
+</div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-xxl py-5" style="background: #fff; border-radius: 15px; " >
+
+   
+
+<section class="trip">  
+   
+  <div class="section__container trip__container">
+  <div class="text-center wow fadeInUp" data-wow-delay="0.1s" >
+        <div class="text-center">
+          <div class="title-about" data-aos="fade-right" id="destinasi">
+            <h2>
+              <center>
+                <br>
+        Destinasi 
+        
+             </center>
+            </h2>
+          </div>
+       </div>
+      </div>
+
+    <div class="trip__grid">
+      <div class="trip__card">
+        
+        <img src="gambar/top2.jpg" alt="trip"  style="width: 100%;" />
+        <div class="trip__details">
+          <p>Roman, <i class="icofont-location-pin">Italy</i></p>
+          <div class="rating"><i class="fas fa-star active-star"></i> 4.2  <span class="text-muted">(245)</span></div>
+          <div class="booking__price">
+            <div class="price"><h3 class="mb-0" style=" color: #00E194; font-weight:700; " ><span style="font-size: 1.5rem; color: #000000; font-weight:700; letter-spacing: 2px; ">IDR</span> 	2,420,000 </h3>
+            </div>
+            <a href="booking.html">   <button class="btn btn-outline-primary book_now"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Booking</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="trip__card">
+        <img src="gambar/jepang1.jpg" alt="trip" style="width: 100%;"/>
+        <div class="trip__details">
+          <p>Hōkan-ji Temple, <i class="icofont-location-pin">Jepang</i></p>
+          <div class="rating"><i class="fas fa-star active-star"></i> 4.5  <span class="text-muted">(245)</span></div>
+          <div class="booking__price">
+            <div class="price"><h3 class="mb-0" style=" color: #00E194; font-weight:700; " ><span style="font-size: 1.5rem; color: #000000; font-weight:700; letter-spacing: 2px; ">IDR</span>  2.359.621</h3>
+              </div>
+              <a href="booking.html">   <button class="btn btn-outline-primary book_now"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Booking</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="trip__card">
+        <img src="gambar/trip-3.jpg" alt="trip"  style="width: 100%;" />
+        <div class="trip__details">
+          <p>The Dolomites, <i class="icofont-location-pin">Italy</i></p>
+          <div class="rating"><i class="fas fa-star active-star"></i> 4.7 <span class="text-muted">(2,017)</span> </div>
+          <div class="booking__price">
+            <div class="price"><h3 class="mb-0" style=" color: #00E194; font-weight:700; " ><span style="font-size: 1.5rem; color: #000000; font-weight:700; letter-spacing: 2px; ">IDR</span> 3.257,632</h3>
+            </div>
+         <a href="booking.html"> <button class="btn btn-outline-primary book_now"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Booking</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view__all">
+      <a class="btn buton btn-primary py-2 px-4 mt-2" href="">Lihat Semua Destinasi</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
+<script>
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+    autoplay:false,
+      autoplayTimeout:3000,
+      autoplayHoverPause:true,
+      center: false,
+      navText: [
+        "<i class='fa fa-angle-left'></i>",
+        "<i class='fa fa-angle-right'></i>"
+    ],
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:3
+          }
+      }
+    });
+  });
+</script>
+
+
+  <div class="container  py-5" style="background: #fff; border-radius:15px;">
+<section class="portfolio" >
+	
+  <div class="text-center">
+    <div class="title-about" data-aos="fade-right" id="ga1n">
+      <h2 style="color:#000000;">
+        <center>
+          <br>
+     Gallery
+       </center>
+      </h2>
+    </div>
+    <br>
+  <br>
+ </div>
+<main class="mainContainer">
+		
+  <!--  *****  Buttons Section Starts  *****  -->
+  <div class="button-group">
+    <button class="button active" data-filter="*">All</button>
+    <button class="button" data-filter=".jepang">Jepang</button>
+  <button class="button" data-filter=".Bali">Bali</button>
+    <button class="button" data-filter=".korea">Korea</button>
+    <button class="button" data-filter=".london">London</button>
+  </div>
+  <!--  *****  Buttons Section Ends  *****  -->
+
+  <!--  *****  Gallery Section Starts  *****  -->
+  <div class="gallery">
+    
+   <!-- jepang -->
+    <div class="item jepang">
+      <a data-fancybox="gallery" href="Gambar/jp1.jpg">
+        <img src="Gambar/jp1.jpg">
+      </a>
+      <div class="overlay">
+  
+      </div>
+    </div>
+ 
+    <div class="item jepang">
+     <a data-fancybox="gallery" href="Gambar/jp2.jpg">
+        <img src="Gambar/jp2.jpg">
+      </a>
+      <div class="overlay">
+     
+      </div>
+    </div>
+
+    <div class="item jepang">
+      <a data-fancybox="gallery" href="Gambar/jp3.jpg">
+        <img src="Gambar/jp3.jpg">
+      </a>
+      <div class="overlay">
+     
+      </div>
+    </div>
+    <div class="item jepang">
+      <a data-fancybox="gallery" href="Gambar/jp4.jpg">
+        <img src="Gambar/jp4.jpg">
+      </a>
+      
+      <div class="overlay">
+     
+      </div>
+    </div>
+
+
+
+
+
+
+   <!-- bali -->
+    <div class="item Bali">
+      <a data-fancybox="gallery" href="Gambar/bali1.jpg">
+        <img src="Gambar/bali1.jpg">
+      </a>
+      <div class="overlay">
+      
+      </div>
+    </div>
+    
+    <div class="item Bali">
+      <a data-fancybox="gallery" href="Gambar/bali2.jpg">
+        <img src="Gambar/bali2.jpg">
+      </a>
+      <div class="overlay">
+      
+      </div>
+    </div>
+    
+    <div class="item Bali">
+      <a data-fancybox="gallery" href="Gambar/bali3.jpg">
+        <img src="Gambar/bali3.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+    <div class="item Bali">
+      <a data-fancybox="gallery" href="Gambar/bali4.jpg">
+        <img src="Gambar/bali4.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+
+
+
+
+
+ <!-- Korea -->
+    <div class="item korea">
+      <a data-fancybox="gallery" href="Gambar/kor1.jpg">
+        <img src="Gambar/kor1.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+    <div class="item korea">
+      <a data-fancybox="gallery" href="Gambar/kor2.jpg">
+        <img src="Gambar/kor2.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+    <div class="item korea">
+      <a data-fancybox="gallery" href="Gambar/kor3.jpg">
+        <img src="Gambar/kor3.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+    <div class="item korea">
+      <a data-fancybox="gallery" href="Gambar/kor4.jpg">
+        <img src="Gambar/kor4.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+
+    <div class="item london">
+      <a data-fancybox="gallery" href="Gambar/lon1.jpg">
+        <img src="Gambar/lon1.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+    <div class="item london">
+      <a data-fancybox="gallery" href="Gambar/lon2.jpg">
+        <img src="Gambar/lon2.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+
+    <div class="item london">
+      <a data-fancybox="gallery" href="Gambar/lon3.jpg">
+        <img src="Gambar/lon3.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+
+    <div class="item london">
+      <a data-fancybox="gallery" href="Gambar/lon4.jpg">
+        <img src="Gambar/lon4.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+    <div class="item ">
+      <a data-fancybox="gallery" href="Gambar/tmb1.jpg">
+        <img src="Gambar/tmb1.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+
+    <div class="item">
+      <a data-fancybox="gallery" href="Gambar/tmb2.jpg">
+        <img src="Gambar/tmb2.jpg">
+      </a>
+      <div class="overlay">
+   
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+  </div>
+  <!--  *****  Gallery Section Ends  *****  -->
+
+</main>
+</section>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="modal fade" id="blog0">
+  <div class="modal-dialog modal-lg" style="background: white;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="Gambar/blog1.jpg" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>20 Mei <i class="icofont-location-pin">Jepang,Honshu</i></div>
+        <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+        
+        <br>
+        <p class="Deskripsi" style="text-align: justify;">
+          Puncak tertinggi di Jepang adalah Gunung Fuji yang tingginya mencapai 3.776 m di atas permukaan laut. Gunung yang berjarak 100 km dari Tokyo ini terkenal sebagai salah satu dari “tiga gunung suci” di Jepang. Gunung Fuji juga telah terdaftar sebagai warisan budaya dunia oleh UNESCO pada tahun 2013 lalu. Pada musim pendakian, gunung ini dikunjungi oleh ribuan pendaki dari seluruh dunia.</p>
+<p>Setiap tahun, gunung ini dibuka untuk hiking dari Juli sampai pertengahan Seeptember. Lebih dari 200,000 pendaki mengunjungi Gunung Fuji untuk mendakinya dan melihat pemandangan dari puncak gunung i</p>
+
+  Mendaki melalui rute yang mana pun, pasti bisa mencapai puncak. Bila mendaki pelan-pelan, akan makan waktu 4 - 8 jam dan perlu waktu 2 - 4 jam untuk turun.</p>
+<p>Terdapat beberapa tempat pemandangan Gunung Fuji di Kawaguchiko, dan yang di atas adalah dari Ubuyagasaki. Di Ubuyagasaki, Anda dapat melihat Gunung Fuji tercermin di permukaan danau. Salah satu pemandangan terunik Gunung Fuji di Danau Kawaguchiko adalah pada saat musim dingin, dengan “fuyu-hanabi”, atau kembang api musim dingin.</p>
+<h2>Google Maps :</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13015.197565360691!2d138.71706365844568!3d35.36062456307507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019629a42fdc899%3A0xa6a1fcc916f3a4df!2sGn.%20Fuji!5e0!3m2!1sid!2sid!4v1684587567607!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>  
+</div>
+
+<main class="container">
+  <div class="text-center">
+    <div class="title-about" data-aos="fade-right" >
+      <h2 style="color:#000000;">
+        <center>
+          <br>
+          Articles
+       </center>
+      </h2>
+    </div>
+    <br>
+  <br>
+ </div>
+  <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-size: contain; background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gambar/blog1.jpg'); background-size: cover; background-position: center; box-shadow: 0 25px 50px #CFDEF3;">
+    <div class="col-md-6 px-8">
+      <h1 class="display-4 fst-italic">Destinasi Terlaris</h1>
+      <p class="lead my-3" style="text-align: justify; font-size:12px;">Gunung Fuji adalah salah satu ikon Jepang yang paling terkenal di seluruh dunia. Dengan ketinggian mencapai 3.776 meter, gunung berapi ini merupakan salah satu gunung tertinggi di Jepang dan menjadi salah satu tujuan wisata terpopuler di negara tersebut.</p>
+      <p class="lead mb-0">
+        <a href="#" class="w-bold " style="color: #00E194;" data-bs-toggle="modal" data-bs-target="#blog0">Baca Selanjutnya</a>
+      </p>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #fff;">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 " style="color: #00E194;">Trending</strong>
+          <h3 class="mb-0">Nusa Penida</h3>
+          <br>
+          <div class="bd-placeholder-img respo-blog" style="height: 400px!important; max-width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog.jpg">
+            <img src="Gambar/blog.jpg" alt="Thumbnail" class="img-fluid" style="height:100%; width:100%; object-fit:cover;" >
+            </a>
+          </div>
+          <br>
+          <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>15 Mei <i class="icofont-location-pin">Indonesia,Bali</i></div>
+          <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+     
+          <div class="col-md-12">
+            <div class="mb-1 text-muted">
+              <br>
+              <p class="card-text" style="font-size: 14px; text-align:justify;">Pantai Diamond salah satu objek wisata terbaru yang instagramable di Nusa Penida, menawarkan keindahan pantai berpasir putih tersembunyi di balik tebing...</p>
+             
+              <a class="btn buton btn-primary py-2 px-4 mt-2"data-bs-toggle="modal" data-bs-target="#blog1" href="">Baca Selanjutnya</a>
+            </div>   
+          </div>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <div class="bd-placeholder-img" style="height:  400px!important; width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog.jpg">
+            <img src="Gambar/blog.jpg" alt="Thumbnail"  class="img-fluid"  style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #fff;">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 " style="color: #00E194;">Terbaru</strong>
+          <h3 class="mb-0">Hitachi Seaside</h3>
+          <br>
+          <div class="bd-placeholder-img respo-blog" style="height:  400px!important; max-width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog6.jpg">
+            <img src="Gambar/blog6.jpg" alt="Thumbnail" class="img-fluid" style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+          <br>
+          <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>14 Mei <i class="icofont-location-pin">Jepang,Hitachinaka</i></div>
+          <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+     
+          <div class="col-md-12">
+            <div class="mb-1 text-muted">
+              <br>
+              <p class="card-text" style="font-size: 14px; text-align:justify;">Tempat yang terkenal dengan bunga berskala besarnya yang berubah seiring musim.Saat musim semi tamannya tampak seperti ombak warna-warni...</p>
+             
+              <a class="btn buton btn-primary py-2 px-4 mt-2" data-bs-toggle="modal" data-bs-target="#blog2" href="">Baca Selanjutnya</a>
+            </div>   
+          </div>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <div class="bd-placeholder-img" style="height: 400px!important; width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog6.jpg">
+            <img src="Gambar/blog6.jpg" alt="Thumbnail"  class="img-fluid"  style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #fff;">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 " style="color: #00E194;">Terbaru</strong>
+          <h3 class="mb-0">Labuan Bajo</h3>
+          <br>
+          <div class="bd-placeholder-img respo-blog" style="height:  400px!important; max-width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog3.jpg">
+            <img src="Gambar/blog3.jpg" alt="Thumbnail" class="img-fluid" style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+          <br>
+          <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>14 Mei <i class="icofont-location-pin">Indonesia,NTT</i></div>
+          <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+     
+          <div class="col-md-12">
+            <div class="mb-1 text-muted">
+              <br>
+              <p class="card-text" style="font-size: 14px; text-align:justify;">Labuan Bajo merupakan sebuah surga tersembunyi yang ada di Indonesia bagian timur. Desa ini terletak di Kecamatan Komodo, Kabupaten Manggarai Barat...</p>
+             
+              <a class="btn buton btn-primary py-2 px-4 mt-2"  data-bs-toggle="modal" data-bs-target="#blog3"  href="">Baca Selanjutnya</a>
+            </div>   
+          </div>
+        </div>
+    <div class="col-auto d-none d-lg-block">
+  <div class="bd-placeholder-img" style="height:  400px!important; max-width: 350px;">
+    <a data-fancybox="gallery" href="Gambar/blog3.jpg">
+    <img src="Gambar/blog3.jpg" alt="Thumbnail" class="img-fluid" style="height:100%; width:100%; object-fit:cover;">
+    </a>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #fff;">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2" style="color: #00E194;">Terlama</strong>
+          <h3 class="mb-0">One Pillar Pagoda</h3>
+          <br>
+          <div class="bd-placeholder-img respo-blog" style="height:  400px!important; max-width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog5.jpg">
+            <img src="Gambar/blog5.jpg" alt="Thumbnail" class="img-fluid" style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+          <br>
+          <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>2 Mei <i class="icofont-location-pin"> Vietnam,Hanoi</i></div>
+          <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+     
+          <div class="col-md-12">
+            <div class="mb-1 text-muted">
+              <br>
+              <p class="card-text" style="font-size: 14px; text-align:justify;">Sebuah pagoda yang unik karena dibangun dengan hanya satu pilar penopang dan berada di tengah kolam sehingga menyerupai bunga lotus yang menjadi lambang ...</p>
+             
+              <a class="btn buton btn-primary py-2 px-4 mt-2"   data-bs-toggle="modal" data-bs-target="#blog4"  href="">Baca Selanjutnya</a>
+            </div>   
+          </div>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <div class="bd-placeholder-img" style="height:  400px!important; width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog5.jpg">
+            <img src="Gambar/blog5.jpg" alt="Thumbnail"  class="img-fluid"  style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #fff;">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 " style="color: #00E194;">Terlama</strong>
+          <h3 class="mb-0">Raja Ampat</h3>
+          <br>
+          <div class="bd-placeholder-img respo-blog" style="height:  400px!important; max-width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog4.jpg">
+            <img src="Gambar/blog4.jpg" alt="Thumbnail" class="img-fluid" style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+          <br>
+          <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>29 April <i class="icofont-location-pin">Indonesia,Bali</i></div>
+          <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+     
+          <div class="col-md-12">
+            <div class="mb-1 text-muted">
+              <br>
+              <p class="card-text" style="font-size: 14px; text-align:justify;">Kepulauan Raja Ampat berada di bagian paling barat Papua dan membentang di area seluas kurang lebih 4,6 juta hektar. Kabupaten Raja Ampat terdiri dari 4 pulau...</p>
+             
+              <a class="btn buton btn-primary py-2 px-4 mt-2"  data-bs-toggle="modal" data-bs-target="#blog5"  href="">Baca Selanjutnya</a>
+            </div>   
+          </div>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <div class="bd-placeholder-img" style="height: 400px!important; width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog4.jpg">
+            <img src="Gambar/blog4.jpg" alt="Thumbnail"  class="img-fluid" style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #fff;">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 " style="color: #00E194;">Terlama</strong>
+          <h3 class="mb-0">Pura Tanah Lot</h3>
+          <br>
+          <div class="bd-placeholder-img respo-blog" style="height:  400px!important; max-width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog2.jpg">
+            <img src="Gambar/blog2.jpg" alt="Thumbnail" class="img-fluid" style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+          <br>
+          <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>28 April <i class="icofont-location-pin">Indonesia,Bali</i></div>
+          <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+     
+          <div class="col-md-12">
+            <div class="mb-1 text-muted">
+              <br>
+              <p class="card-text" style="font-size: 14px; text-align:justify;">Pura Tanah Lot adalah salah satu daya tarik wisata paling populer di Pulau Bali sekaligus menjadi Pura penting bagi masyarakat Bali...</p>
+             <br>
+              <a class="btn buton btn-primary py-2 px-4 mt-2"  data-bs-toggle="modal" data-bs-target="#blog6" href="">Baca Selanjutnya</a>
+            </div>   
+          </div>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <div class="bd-placeholder-img" style="height:  400px!important; width: 350px;">
+            <a data-fancybox="gallery" href="Gambar/blog2.jpg">
+            <img src="Gambar/blog2.jpg" alt="Thumbnail"   class="img-fluid" style="height:100%; width:100%; object-fit:cover;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+ 
+</main>
+
+
+
+
+
+
+
+<div class="modal fade" id="blog1">
+  <div class="modal-dialog modal-lg" style="background: white;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="Gambar/blog.jpg" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>15 Mei <i class="icofont-location-pin">Indonesia,Bali</i></div>
+        <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>        <br>
+        <br>
+        <p class="Deskripsi" style="text-align: justify;">
+    
+        Pesona indah yang ditawarkan pulau Nusa Penida, menjadikannya sebagai tujuan wajib ketika anda liburan ke Bali, terutama tempat rekreasi alam pesisir yang membuat wisatawan berdecak kagum. Salah satu yang baru di kawasan pariwisata ini adalah pantai Diamond.
+        </p><p>
+        
+          Seperti diketahui, Nusa Penida adalah pulau Kecil yang terletak di kabupaten Klungkung Bali, untuk menuju pulau tersebut bisa dengan transportasi laut, dan pilihan populer adalah dengan fast boat atau kapal cepat. </p>
+      <P>Sebelumnya keindahan Pantai Diamond di pulau Nusa Penida tersebut hanya bisa dinikmati dari ketinggian di atas tebing bukit, namun sekarang anda bisa langsung menuju bibir pantainya.</P>
+      
+<p>
+  Pantai Diamond sekarang ini salah satu objek wisata terbaru yang alamnya cantik, indah dan instagramable di pulau Nusa Penida, menawarkan keindahan pantai pasir putih bersih dan masih jarang dikunjungi, lokasinya juga tersembunyi di balik tebing bukit.
+</p><p>
+Tapi perlu diketahui, untuk menikmati keindahan pantai Diamond dan dapat menginjakkan kaki di pesisir pantainya, anda perlu stamina ekstra, karena anda harus menapaki tangga demi tangga yang terletak di dinding tebing bukit yang curam.
+</p>  
+
+  <h2>Google Maps :</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91188.95485708983!2d115.56314412076952!3d-8.723248230233837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd277161f77ae31%3A0xdad8747b0363d8d!2sDIAMOND%20BEACH%20NUSA%20PENIDA!5e0!3m2!1sid!2sid!4v1684579065235!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+  
+
+        </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="modal fade" id="blog2">
+  <div class="modal-dialog modal-lg" style="background: white;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="Gambar/blog3.jpg" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>14 Mei <i class="icofont-location-pin">Indonesia,NTT</i></div>
+        <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+        <br>
+        <p class="Deskripsi" style="text-align: justify;">
+          Hitachi Seaside Park terkenal dengan bunga berskala besarnya yang berubah seiring musim. Saat musim semi, tamannya tampak seperti ombak warna-warni, karena ada hampir 260.000 tulip dan lebih dari satu juta bunga narcisuss (dafodil) menghiasi area di sekitar jalan setapak di hutan.
+</p>
+<p>
+  Di waktu yang sama, lereng bukit yang luas di dekat batas tepi pantai taman tersebut memancarkan warna biru nemophila yang cemerlang. Warna musim panas juga elok dengan datangnya bunga matahari dan zinnia, serta pemandangan menyegarkan dari semak-semak kochia yang menghijau di atas bukit. Semak kochia itu berwarna magenta cerah saat memasuki musim gugur, menciptakan latar belakang yang kontras dengan langit biru cerah di musim tersebut. Bahkan musim dingin menawarkan pemandangan yang penuh warna dengan mekarnya bunga tulip es dan pohon aprikot jepang.
+</p>
+   
+<p>
+  Meski bunga adalah daya tarik utama, taman ini juga menawarkan sejumlah pilihan hiburan lainnya. Ada taman hiburan yang cocok untuk tamasya keluarga, kemudian ada juga area atletik yang akan memuaskan wisatawan yang lebih aktif. Semua dapat berkumpul untuk menikmati makanan di taman BBQ atau salah satu dari banyak kafe dan restoran yang terletak di seluruh area. </p><p>
+Tapi perlu diketahui, untuk menikmati keindahan pantai Diamond dan dapat menginjakkan kaki di pesisir pantainya, anda perlu stamina ekstra, karena anda harus menapaki tangga demi tangga yang terletak di dinding tebing bukit yang curam.
+</p>  
+
+  <h2>Google Maps :</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.247024883713!2d140.59120457571032!3d36.403218272363006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60218b1d845e4441%3A0x767e1dea03e6f0e1!2sTaman%20Hitachi%20Seaside!5e0!3m2!1sid!2sid!4v1684579381286!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  
+
+        </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="modal fade" id="blog3">
+  <div class="modal-dialog modal-lg" style="background: white;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="Gambar/blog3.jpg" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>14 Mei <i class="icofont-location-pin">Indonesia,NTT</i></div>
+        <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+        <br>
+        <p class="Deskripsi" style="text-align: justify;">
+          Labuan Bajo merupakan sebuah surga tersembunyi yang ada di Indonesia bagian timur. Desa ini terletak di Kecamatan Komodo, Kabupaten Manggarai Barat, Provinsi Nusa Tenggara Timur yang berbatasan langsung dengan Nusa Tenggara Barat dan dipisahkan oleh Selat Sape. Labuan Bajo adalah salah satu dari lima Destinasi Super Prioritas yang sedang dikembangkan di Indonesia. </p>
+<p>
+  Destinasi ini merupakan gerbang menuju Taman Nasional Komodo yang menyimpan keindahan alam yang menakjubkan dan hewan purba yang mendunia. Mulai dari hewan endemik komodo di Pulau Rinca dan Pulau Komodo, deretan pulau eksotis, keragaman hayati bawah laut, hingga pantai aduhai, semua bisa Sobat Pesona temukan dengan memulai perjalanan di Labuan Bajo.</p>
+   
+<p>
+  Menikmati pemandangan langit senja juga bisa menjadi cara lain menikmati Labuan Bajo. Spot strategis untuk menikmati keindahan senja ini berada tak jauh dari Bandar Udara Internasional Komodo. Sobat Pesona dapat memilih destinasi Bukit Cinta, Puncak Amelia, dan Puncak Silvia, untuk mengabadikan langit senja yang menentramkan jiwa. Ada juga Gua Rangko yang memiliki pesona bak oasis dengan kolam air asinnya yang begitu menyejukkan.</p>  
+
+  <h2>Google Maps :</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63144.20750914903!2d119.82302752240429!3d-8.44939189708301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db468a6d47ed641%3A0x87f524333c6a6e8d!2sLabuan%20Bajo%2C%20Kec.%20Komodo%2C%20Kabupaten%20Manggarai%20Barat%2C%20Nusa%20Tenggara%20Tim.!5e0!3m2!1sid!2sid!4v1684585679184!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+
+        </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="blog4">
+  <div class="modal-dialog modal-lg" style="background: white;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="Gambar/blog5.jpg" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>2 Mei <i class="icofont-location-pin"> Vietnam,Hanoi</i></div>
+<i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+
+        <br>
+        <p class="Deskripsi" style="text-align: justify;">
+          Pilar tersebut terdiri dari dua balok batu yang ditumpuk satu sama lain dengan tinggi 4 meter dan diameter 1,2 meter. Lien Hoa Dai, struktur kayu di atas pilar berukuran 3 meter kali 3 meter. Ia memiliki empat atap melengkung yang ditutupi dengan empat bentuk kepala naga. Atap pagoda ditutupi dengan ubin merah dan berlumut tradisional, menunjukkan ketelitian pengrajin.</p><p>
+            Di pagoda Anda akan menemukan patung dewi Buddha wanita Avalokitesvara di atas singgasana kayu dan berpernis merah di posisi tertinggi. Selain itu, ada benda-benda pemujaan seperti vas bunga, beberapa lilin dan pot bunga.</p>
+   
+<p>
+ 
+  Tempat menarik lainnya adalah pohon bo yang berdiri di belakang pagoda, yang menurut legenda merupakan cabang dari pohon tempat Buddha tercerahkan – pohon itu diberikan sebagai hadiah dari presiden India kepada Ho Chi Minh pada tahun 1958.</p>  <h2>Google Maps :</h2>
+  <h2>Google Maps :</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9208820413332!2d105.83104537512943!3d21.035851480615275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba1728475ed%3A0xdbe7366fe9dfc2ae!2sOne%20Pillar%20Pagoda!5e0!3m2!1sid!2sid!4v1684586046051!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="blog5">
+  <div class="modal-dialog modal-lg" style="background: white;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="Gambar/blog4.jpg" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>29 April <i class="icofont-location-pin">Indonesia,Bali</i></div>
+        <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+   
+        <br>
+        <p class="Deskripsi" style="text-align: justify;">
+          Raja Ampat adalah sebuah kabupaten dan merupakan bagian dari Propinsi Papua Barat. Untuk mencapai Kepulauan ini, kita harus menginjakkan kaki di kota Sorong terlebih dahulu. Biasanya para wisatawan banyak menggunakan penerbangan untuk sampai ke kota ini. Setelah sampai kota Sorong, kita dapat menggunakan sejenis kapal cepat yang biasa berlayar dua kali sehari menuju Waisai, ibukota kabupaten Raja Ampat. Perjalanan hanya akan memakan waktu sekitar 2-3 jam saja dari pelabuhan Sorong, hingga sampai di pelabuhan Waisai Raja Ampat.
+</p>
+<p> Secara umum, Raja Ampat adalah kepulauan yang terdiri dari banyak sekali pulau karang dan tersebar luas di seluruh wilayahnya. Namun demikian, Raja Ampat memiliki 4 pulau utama yang paling besar, yaitu Pulau Waigeo, Pulau Batanta, Pulau Salawati, dan Pulau Misool. Empat pulau besar inilah yang menjadi titik awal penyebaran seluruh penduduk Raja Ampat yang sebagian besar berprofesi sebagai nelayan. Wilayah perairan adalah daya tarik utama Raja Ampat, mengingat perairan Raja Ampat adalah salah satu dari 10 perairan terbaik di seluruh dunia. Hal ini didasarkan pada berbagai penelitian tentang kekayaan flora-fauna dan kelestarian alam laut yang dimiliki Raja Ampat.</p>
+<p>Sebuah laporan badan konservasi internasional pernah menyebutkan bahwa perairan Raja Ampat memiliki sekitar 75% spesies laut seluruh dunia. Bahkan, wilayah laut dan darat Raja Ampat yang memiliki luas 4,6 juta hektar ini menjadi rumah bagi 540 jenis karang, 1.511 spesies ikan dan ribuan biota laut lainnya. Oleh karena itu, dengan berbagai keunggulan ini tidak heran apabila Raja Ampat saat ini dianggap sebagai surga bawah laut tercantik di seluruh dunia.</p>
+<h2>Google Maps :</h2>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2042455.7692348333!2d129.1855554723214!3d-1.0317730741481197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d5c3eaaccb47097%3A0x7851bd844c4cdf44!2sKabupaten%20Raja%20Ampat!5e0!3m2!1sid!2sid!4v1684586326810!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>  
+
+<div class="modal fade" id="blog6">
+  <div class="modal-dialog modal-lg" style="background: white;">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><img src="Gambar/blog2.jpg" alt=""  class="img-fluid"></h4>
+       
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="mb-1 text-muted"> <font size="2" color="#666666" face="Verdana, Geneva, sans-serif"></font><i class="icofont-calendar"></i>28 April <i class="icofont-location-pin">Indonesia,Bali</i></div>
+        <i class="icofont-business-man-alt-1">    Admin Travelang </font></i>
+        
+        <br>
+        <p class="Deskripsi" style="text-align: justify;">
+          Tanah Lot ini terletak di Tabanan, hanya berjarak 30 km dari Denpasar. Sedangkan puranya terletak sekitar 300 meter di lepas pantai. Pura Tanah Lot diyakini berasal dari abad ke-16 menurut penuturan dari Dang Hyang Nirartha, seorang tokoh agama yang dihormati di Bali.
+</p>
+<p>Dang Hyang Nirartha dipercaya sebagai tokoh yang membuat sistem tiga kuil di desa-desa di Bali. Beliau menetapkan lokasi pembagian kuil dimana kuil yang di bangun di sebelah utara desa diperuntukkan untuk Dewa Brahma, di tengah desa untuk Dewa Wisnu, sedangkan kuil di sisi selatan untuk Dewa Siwa. Ia mendapatkan ilham untuk membangun kuil saat sedang berjalan-jalan di pinggir pantai selatan Bali. Kala itu beliau melihat sebuah pulau batu kecil yang dikenal dengan nama Gili Beo, di desa Beraban. Saat ingin melaksanakan niatnya membangun kuil di Gili Beo, pemimpin dan rakyat Beraban justru mengusir Nirartha.</p>
+<p>Berdasarkan mitologi Bali, Dang Hyang Nirartha dikenal sebagai orang yang memiliki kekuatan gaib yang luar biasa hingga beliau mampu memindahkan seluruh pulau batu ke laut, membangun sebuah kuil dan menamakannya Tanah Lot. Sampai-sampai seluruh desa Beraban sangat terkejut dan kemudian bergabung untuk mengikuti apa yang Nirartha yakini. Pura Tanah Lot dibangun untuk menyembah Bhatara Segara, atau Dewa Laut. Konon, untuk melindungi kuilnya, Nirartha menciptakan ular berbisa berkat kekuatan selendangnya. Ular laut ini diyakini hidup di dasar Tanah Lot, untuk menjaga kuil dari para pengganggu jahat.</p>
+<p>Saat ini, Tanah Lot menjelma menjadi spot wisata favorit untuk berfoto. Di sini, Sobat Pesona juga dapat menemukan banyak toko yang menjual produk lokal dan kerajinan tangan di sepanjang jalan masuk menuju Tanah Lot.</p>
+
+<h2>Google Maps :</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.737174986547!2d115.08422822487915!3d-8.621211841424746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd237824f71deab%3A0xcaabe270f7e34d69!2sTanah%20Lot!5e0!3m2!1sid!2sid!4v1684586603866!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>  
+
+<br>
+<br>
+<div class="container  py-5" style="background: #fff; border-radius:15px;">
+  <div class="text-center">
+    <div class="title-about" data-aos="fade-right">
+      <h2 style="color:#000000;">
+        <center>
+          <br>
+          Check Cuaca
+       </center>
+      </h2>
+    </div>
+    <br>
+  <br>
+ </div>
+
+  <div class="row mt-2 justify-content-center" >
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control input-keyword" placeholder="Enter City's or Country's Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn " style="background-color:#00E194; color:#fff; " type="button" id="button-addon2">Search</button>
+        </div>
+    </div>
+</div><div class="container mt-5 result">
+  
+  
+</div>
+</div>
+
+
+
+<script>
+  const searchButton = document.querySelector('#button-addon2');
+const inputKeyword = document.querySelector('.input-keyword');
+document.body.style.backgroundImage = 'url(img/sky.jpg)'
+
+searchButton.addEventListener('click', function() {
+
+  fetch("https://api.openweathermap.org/data/2.5/weather?q="+inputKeyword.value+"&appid=1fe5f03e8b679377cbc41601289edfdd&units=metric")
+      .then(response => response.json())
+      .then(response => {
+          let result = document.querySelector('.result');
+
+          let icon = response.weather[0].icon;
+          let iconUrl = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${icon}.svg`;
+
+          result.innerHTML = `
+            <div class="weather-container">
+              <div class="weather-icon">
+                <img src="${iconUrl}" alt="${response.weather[0].description}" />
+              </div>
+              <div class="weather-info">
+                <h2>${response.name}, ${response.sys.country}</h2>
+                <h3 class="weather-temp">${response.main.temp}°С</h3>
+                <h4 class="weather-desc">${response.weather[0].description}</h4>
+                <p class="weather-minmax">Temperature from ${response.main.temp_min}°С to ${response.main.temp_max}°С</p>
+                <p class="weather-wind">Wind Speed : ${response.wind.speed} m/s</p>
+                <p class="weather-clouds">Clouds : ${response.clouds.all}%</p>
+                <p class="weather-coords">Geo Coordinates : [${response.coord.lat}, ${response.coord.lon}]</p>
+              </div>
+            </div>
+          `; 
+      })
+  inputKeyword.value = null;
+
+});
+</script>
+<!-- Blog -->
+
+
+
+
+
+
+
+
+
+<footer class="footer-32892 pb-0 ">
+  <div class="site-section">
+    <div class="container">
+
+      
+      <div class="row" style="color: #FFF;"> 
+         <div class="col-md pr-md-5 mb-4 mb-md-0" id="contact">
+        <h3>Kontak Kami</h3>
+        <p class="mb-4">Silahkan kunjungi segera Travelang, kalau ada yang yang ingin ditanyakan silahkan hubungi kontak dibawah ini.</p>
+        <ul class="list-unstyled quick-info mb-4">
+          <li><a href="#" class="d-flex align-items-center"><span class="icofont-phone"></span>Telp  : +62 821 472 469</a></li>
+          <li><a href="#" class="d-flex align-items-center"><span class="icofont-email"></span>Email :info@gmail.com</a></li>
+        </ul>
+
+      
+      </div>
+
+
+
+      <div class="col-md mb-4 mb-md-0">
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.084739364345!2d115.23159441464578!3d-8.683491693760983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2409b0e5e80db%3A0xad78f1ff66b638d2!2sSMK%20TI%20Bali%20Global%20Denpasar!5e0!3m2!1sid!2sid!4v1594526597296!5m2!1sid!2sid" width="100%" height="370" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+
+       
+          <div class="col-md-3 mb-4 mb-md-0">
+            <h2>Contact Us</h2>
+            <form>
+              <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                <label for="inputMessage">Message</label>
+                <textarea class="form-control" id="inputMessage" rows="5" placeholder="Enter your message"></textarea>
+              </div>
+           <br>
+            </form>   <form action="#" class="subscribe">
+                <input type="text" class="form-control" placeholder="Enter your e-mail">
+                <input type="submit" class="btn btn-submit" value="Send">
+              </form>
+          </div>
+         
+      
+       
+          <div class="col-12">
+            <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
+             
+              <div class="site-logo-wrap ml-auto">
+                <a href="#" class="site-logo">
+                  © Copyright Travelang
+                </a>
+                <a href="#" class="credit">
+                 I Gusti Ngurah Elang Avatar - 2023
+                </a>
+                 <ul class="list-unstyled footer-menu mr-auto">
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Script -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="lib/fancybox/jquery.fancybox.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+   <script src="lib/anime-3.2.1/lib/anime.js"></script>
+   <script src="lib/anime-3.2.1/lib/anime.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+ 
+    <script src="js/main.js"></script>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+      $(document).ready(function() {
+        // Mengatur durasi loading (dalam milidetik)
+        var loadingDuration = 5000; // Ubah angka 5000 menjadi durasi loading yang diinginkan dalam milidetik
+      
+        // Menyembunyikan konten di dalam body
+        $('body').css('overflow', 'hidden');
+      
+        setTimeout(function() {
+          // Menghilangkan preloader saat semua konten selesai dimuat
+          $('.preloader').fadeOut('slow', function() {
+            $(this).remove();
+            $('body').css('overflow', 'auto'); // Mengaktifkan kembali scroll pada body setelah preloader hilang
+          });
+        }, loadingDuration);
+      });
+
+      $(".custom-carousel").owlCarousel({
+        autoWidth: true,
+        loop: true
+      });
+      $(document).ready(function () {
+        $(".custom-carousel .item").click(function () {
+          $(".custom-carousel .item").not($(this)).removeClass("active");
+          $(this).toggleClass("active");
+        });
+      });
+  
+      new Typed('#typed1',{
+        strings : ['Travelang', 'Website Travel'],
+        typeSpeed : 50,
+        backDelay : 5000,
+        loop : true
+      });
+      new Typed('#typed2',{
+        strings : ['Travelang', 'Website Travel'],
+        typeSpeed : 50,
+        backDelay : 5000,
+        loop : true
+      });
+      new Typed('#typed3',{
+        strings : ['Travelang', 'Website Travel'],
+        typeSpeed : 50,
+        backDelay : 5000,
+       loop: true
+      });
+
+
+
+
+      $(document).ready(function () {
+        var silder = $(".owl-carousel");
+        silder.owlCarousel({
+            autoPlay: false,
+            items: 1,
+            center: false,
+            nav: true,
+            margin: 40,
+            dots: false,
+            loop: true,
+            navText: ["<i class='fa fa-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-arrow-right' aria-hidden='true'></i>"],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                575: { items: 1 },
+                768: { items: 2 },
+                991: { items: 3 },
+                1200: { items: 4 }
+            }
+        });
+    });
+     
+
+    var $galleryContainer = $('.gallery').isotope({
+      itemSelector: '.item',
+        layoutMode: 'fitRows'
+    })
+  
+    $('.button-group .button').on('click', function(){
+      $('.button-group .button').removeClass('active');
+      $(this).addClass('active');
+  
+      var value = $(this).attr('data-filter');
+      $galleryContainer.isotope({
+        filter: value 
+      })
+    })
+
+
+    let filter_btns = document.querySelectorAll('.filter-btn');
+    let projects = document.querySelectorAll('.filter-project-item');
+    
+    filter_btns.forEach((filter_btn) => {
+      filter_btn.addEventListener('click', () => {
+        filter_btns.forEach((filter_btn) => {
+          filter_btn.classList.remove('active');
+        });
+        filter_btn.classList.add('active');
+        let selected = filter_btn.getAttribute('data-project');
+        projects.forEach((project, index) => {
+          let project_length = projects.length;
+          if (
+            project.getAttribute('data-project') === selected ||
+            selected === 'all'
+          ) {
+            if (project.style.transition) {
+              project.style.transition = '';
+            } else {
+              project.style.transition = `width 0.5s ease ${
+                index / project_length + 0.6
+              }s,height 0.5s ease ${index / project_length + 0.6}s`;
+            }
+            project.classList.add('show');
+            project.classList.remove('hide');
+          } else {
+            project.style.transition = `width 0.5s ease ${
+              index / project_length + 0.6
+            }s,height 0.5s ease ${index / project_length + 0.6}s`;
+            project.classList.remove('show');
+            project.classList.add('hide');
+          }
+        });
+      });
+    });
+    
+   
+    </script>
+    <script>
+     
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+  var target = document.querySelector(this.getAttribute('aria-controls'));
+  if (target.classList.contains('show')) {
+    target.classList.remove('sho');
+  } else {
+    target.classList.add('show');
+  }
+}); 
+
+
+
+      
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('.navbar');
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  if (scrollTop > 0) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
+
+
+window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.navbar');
+  if (window.pageYOffset > 0) {
+    navbar.style.backgroundColor = '#fff'; // Ganti dengan warna latar belakang yang diinginkan saat navbar sticky aktif
+    navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'; // Tambahkan efek shadow jika diinginkan
+  } else {
+    navbar.style.backgroundColor = 'white';
+    navbar.style.color = 'black';
+    navbar.style.boxShadow = 'none';
+  }
+});
+
+var header = document.querySelector('.navbar');
+var isNavbarSticky = false;
+
+// Tambahkan class animasi dari animate.css saat navbar menjadi sticky
+window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  if (scrollTop > 0 && !isNavbarSticky) {
+    isNavbarSticky = true;
+    header.classList.add('sticky', 'animate_animated', 'animate_fadeInDown');
+    header.style.animationDuration = '0.5s'; // Sesuaikan durasi animasi sesuai kebutuhan
+  } else if (scrollTop === 0 && isNavbarSticky) {
+    isNavbarSticky = false;
+    header.classList.remove('sticky', 'animate__fadeInDown');
+    header.style.animationDuration = '0s'; // Set durasi animasi menjadi 0 saat kembali ke navbar biasa
+  }
+});
+
+    
+
+
+$(document).ready(function() {
+  var navbar = $(".Navtop-mobile");
+  var stickyClass = "navtop-mobile-sticky";
+  var stickyOffset = navbar.offset().top;
+
+  $(window).on("scroll", function() {
+      var scrollTop = $(window).scrollTop();
+
+      if (scrollTop > stickyOffset) {
+          navbar.addClass(stickyClass);
+      } else {
+          navbar.removeClass(stickyClass);
+      }
+  });
+});
+ 
+
+var headerMobile = document.querySelector('.navtop-mobile');
+var isNavbarMobileSticky = false;
+
+// Tambahkan class animasi dari animate.css saat navbar mobile menjadi sticky
+window.addEventListener('scroll', function() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollTop > 0 && !isNavbarMobileSticky) {
+        isNavbarMobileSticky = true;
+        headerMobile.style.opacity = '1'; // Set opacity menjadi 1 saat navbar menjadi sticky
+        headerMobile.classList.add('navbar-sticky', 'animate_animated', 'animate_fadeInDown');
+    } else if (scrollTop === 0 && isNavbarMobileSticky) {
+        isNavbarMobileSticky = false;
+        headerMobile.style.opacity = '0'; // Set opacity menjadi 0 saat navbar menjadi non-sticky
+        headerMobile.classList.remove('navbar-sticky', 'animate__fadeInDown');
+    }
+});
+
+
+
+
+
+$(document).ready(function() {
+  // Mengatur durasi loading (dalam milidetik)
+  var loadingDuration = 5000; // Ubah angka 5000 menjadi durasi loading yang diinginkan dalam milidetik
+
+  setTimeout(function() {
+    // Menghilangkan preloader saat semua konten selesai dimuat
+    $('.preloader').fadeOut('slow', function() {
+      $(this).remove();
+      $('body').css('overflow', 'auto'); // Mengaktifkan kembali scroll pada body setelah preloader hilang
+    });
+  }, loadingDuration);
+});
+
+
+
+
+
+
+
+
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+      </script>
+
+<!-- Tambahkan kode JavaScript berikut untuk mengatur perubahan transparansi saat mode sticky aktif/non-aktif -->
+
+
+  
+</body>
+</html>

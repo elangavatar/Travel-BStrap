@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/roboto-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+ 
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="lib/icofont/icofont.css">
+  <link rel="stylesheet" href="lib/icofont/icofont.min.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+
+		<style>
+
+
+			
+
+ :root{
+   
+	/* Shaodow Box */
+		--shadow3: 0 5px 10px hsla(357, 64%, 53%, 25%);
+		--shadow4: 0 5px 50px hsla(357, 64%, 53%, 30%);
+	/* Transition */
+		--transition-1: 250ms ease;
+		--transition-2: 500ms ease;
+
+
+		--header-height: 3rem;
+
+		/*========== Colors ==========*/
+		--hue: 174;
+		--sat: 63%;
+		--first-color: hsl(var(--hue), var(--sat), 40%);
+		--first-color-alt: hsl(var(--hue), var(--sat), 36%);
+		--title-color: hsl(var(--hue), 12%, 15%);
+		--text-color: hsl(var(--hue), 8%, 35%);
+		--body-color: hsl(var(--hue), 100%, 99%);
+		--container-color: #FFF;
+	  
+		/*========== Font and typography ==========*/
+		--body-font: 'Open Sans', sans-serif;
+		--h1-font-size: 1.5rem;
+		--normal-font-size: .938rem;
+		--tiny-font-size: .625rem;
+	  
+		/*========== z index ==========*/
+		--z-tooltip: 10;
+		--z-fixed: 100;
+	  
+		--h1-font-size: 2.25rem;
+  --normal-font-size: 1rem;
+	}
+
+.Navtop-mobile{
+display: none;
+}
+	.navbar-mobile{
+display: none;
+}
+
+ul {
+list-style: none;
+}
+
+
+a {
+text-decoration: none;
+}
+
+/* Responsif untuk ukuran mobile */
+@media (max-width: 767px) {
+.navbar-left {
+	margin-right: 5px; /* Mengurangi margin untuk ukuran mobile */
+}
+
+.navbar-brand img {
+	max-width: 80px; /* Mengatur max-width agar responsif pada mobile */
+}
+
+.navbar-title {
+	font-size: 16px; /* Mengurangi ukuran font pada mobile */
+}
+}
+
+@media screen and (max-width: 992px) {
+/* Navbar Mobile */
+
+.Navtop-mobile {
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent; /* Background warna awal transparan */
+  transition: background-color 0.3s ease-in-out; /* Efek transisi perubahan warna */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  vertical-align: middle;
+  max-width: 150px;
+}
+
+.navbar-tit {
+  margin: 0;
+  font-size: 30px;
+  color: #FFF;
+  margin-left: 10px;
+}
+.navbar-tit:hover{
+transform: scale(1.2);
+transition: var(--transition-2);
+color: #00E194!important;
+}
+.navbar-brand img:hover{
+transform: scale(1.2);
+transition: var(--transition-2);
+
+}
+
+
+.navbar-right {
+  margin-left: auto;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  
+  border-radius: 50%;
+}
+.profile-picture:hover{
+transform: scale(1.2);
+transition: var(--transition-2);
+border: #00E194 solid 2px;
+}
+
+/* CSS untuk navbar sticky */
+.navtop-mobile-sticky {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background-color: #f8f8f8;
+		  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+z-index: 9999;
+padding: 10px; /* Atur ukuran padding sesuai kebutuhan Anda */
+height: 70px; /* Atur ukuran tinggi sesuai kebutuhan Anda */
+display: flex;
+align-items: center;
+justify-content: space-between;
+transition: var(--transition-2);
+padding-bottom: 25px;
+
+}
+.navtop-mobile-sticky .navbar-tit {
+color: #000!important; 
+}
+.navtop-mobile-sticky .navbar-tit:hover{
+transform: scale(1.2);
+transition: var(--transition-2);
+color: #00E194!important;
+}
+
+  .nav__menu {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: var(--container-color);
+	box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+	width: 100%;
+	height: 4rem;
+	padding: 0 1rem;
+	display: flex;
+	justify-content: center; /* Posisi menu di tengah secara horizontal */
+	align-items: center; /* Posisi menu di tengah secara vertikal */
+	border-radius: 1.25rem 1.25rem 0 0;
+	transition: .4s;
+	gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+  }
+
+  .nav__list {
+	display: flex;
+	gap: 2.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+	margin: 0; /* Hapus margin sebelumnya */
+	justify-content: center; /* Posisi menu di tengah secara horizontal */
+	align-items: center; /* Posisi menu di tengah secara vertikal */
+  }
+
+  .nav__list--left {
+	flex: none; /* Menghapus flex agar menu kiri tidak menempati sisa ruang */
+	justify-content: center; /* Menyusun menu kiri ke tengah */
+  }
+
+  .nav__list--right {
+	display: flex;
+	gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+	justify-content: center; /* Menyusun menu kanan ke tengah */
+  }
+
+.navbar-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Navbar Desktop */
+.navbar-desk {
+  display: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*=============== HEADER ===============*/
+.navbar-mobile {
+
+
+  width: 100%;
+  background-color: var(--container-color);
+  z-index: var(--z-fixed);
+  transition: .4s;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.nav__logo {
+  color: #000000;
+  font-weight: 600;
+}
+
+.nav__list,
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.nav__list {
+  justify-content: space-around;
+}
+
+.nav__name {
+  font-size: var(--tiny-font-size);
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+/* Active link */
+
+a:hover{
+  color:#00E194!important;
+}
+.nav__item:hover{
+transition: var(--transition-2);
+ transform: scale(1.2);
+}
+}
+@media screen and (max-width: 767px) {
+.nav__menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--container-color);
+  box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center; /* Posisi menu di tengah secara horizontal */
+  align-items: center; /* Posisi menu di tengah secara vertikal */
+  border-radius: 1.25rem 1.25rem 0 0;
+  transition: .4s;
+  gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem; /* Tambahkan jarak antara list item pada menu navbar */
+  margin: 0; /* Hapus margin sebelumnya */
+  justify-content: center; /* Posisi menu di tengah secara horizontal */
+  align-items: center; /* Posisi menu di tengah secara vertikal */
+}
+
+.nav__list--left {
+  flex: none; /* Menghapus flex agar menu kiri tidak menempati sisa ruang */
+  justify-content: center; /* Menyusun menu kiri ke tengah */
+}
+
+.nav__list--right {
+  display: flex;
+  gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+  justify-content: center; /* Menyusun menu kanan ke tengah */
+}
+}
+
+
+
+@media screen and (max-width: 575px) {
+.nav__menu {
+  padding: 0; /* Hapus padding sebelumnya */
+  margin-top: 1rem; /* Tambahkan margin top untuk memberikan jarak pada menu navbar */
+  display: flex;
+  justify-content: center; /* Posisi menu di tengah secara horizontal */
+  align-items: center; /* Posisi menu di tengah secara vertikal */
+  padding-right: 20px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 1.5rem; /* Tambahkan jarak antara list item pada menu navbar */
+  margin: 0; /* Hapus margin sebelumnya */
+}
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+.nav__name {
+  display: none;
+}
+.nav__list {
+  
+  gap: 2rem; /* Tambahkan jarak antara list item pada menu navbar */
+  margin: 0; /* Hapus margin sebelumnya */
+  padding-right: 10px;
+
+ 
+}
+.nav__icon{
+  font-size: 16px;
+}
+
+.profile-picture {
+  width: 35px;
+  height: 35px;
+ 
+  border-radius: 50%;
+ 
+}
+.navbar-container {
+display: flex;
+align-items: center;
+flex-grow: 1;
+padding-right: 5px;
+padding-left: 5px;
+padding-top: 10px;
+}
+.navbar-tit{
+font-size: 20px;
+}
+.navtop-mobile-sticky{
+padding-bottom: 10px;
+
+}
+}
+
+
+
+
+.footer-32892 {
+	background-color: #202126;
+	padding: 2.5rem 0;
+	color: #888;
+	font-size: 16px; }
+	
+	.footer-32892 .subscribe {
+	  position: relative; }
+	  .footer-32892 .subscribe .form-control {
+		background-color: #292b31;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border-radius: 30px;
+		height: 55px;
+		padding-left: 30px;
+		padding-right: 130px;
+		border: none;
+		color: #fff; }
+		.footer-32892 .subscribe .form-control::-webkit-input-placeholder {
+		  color: #ccc;
+		  font-size: 14px; }
+		.footer-32892 .subscribe .form-control::-moz-placeholder {
+		  color: #ccc;
+		  font-size: 14px; }
+		.footer-32892 .subscribe .form-control:-ms-input-placeholder {
+		  color: #ccc;
+		  font-size: 14px; }
+		.footer-32892 .subscribe .form-control:-moz-placeholder {
+		  color: #ccc;
+		  font-size: 14px; }
+	  .footer-32892 .subscribe .btn-submit {
+		background:#00E194;
+		box-shadow: 0 5px 20px #00f8a1dd;
+		height: 47px;
+		border-radius: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+		color: #fff;
+		font-weight: bold;
+		position: absolute;
+		top: 4px;
+		right: 4px;
+	  }
+	 
+	.footer-32892 .tweets li {
+	  margin-bottom: 20px;
+	  font-size: 15px;
+	  font-style: italic;
+	  font-family: "Source Serif Pro", serif; }
+	  .footer-32892 .tweets li span {
+		color: #fff; }
+	.footer-32892 .footer-menu-wrap {
+	  border-top: 1px solid rgba(255, 255, 255, 0.1);
+	  padding-top: 2rem !important;
+	  margin-top: 7rem; }
+	.footer-32892 .footer-menu {
+	  margin-bottom: 0; }
+	  .footer-32892 .footer-menu li {
+		display: inline-block; }
+		@media (max-width: 767.98px) {
+		  .footer-32892 .footer-menu li {
+			display: block; } }
+		.footer-32892 .footer-menu li a {
+		  padding: 10px;
+		  display: inline-block;
+		  color: #fff; }
+		  @media (max-width: 767.98px) {
+			.footer-32892 .footer-menu li a {
+			  display: block;
+			  padding-left: 0px; } }
+		.footer-32892 .footer-menu li:first-child a {
+		  padding-left: 0; }
+	.footer-32892 .site-logo {
+	  color: #fff;
+	  font-size: 20px; }
+	
+  
+  
+	  .input-group {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	  
+	  }
+	  
+	  .input-group .form-control {
+		border-radius: 50px;
+		border: none;  border: #00E194 solid 2px;
+  
+	  }
+	  
+	  .input-group .form-control:focus {
+		box-shadow: none;
+	  }
+	  
+	  .input-group .btn {
+		border-radius: 50px;
+		margin-left: -3px;
+	  }
+  
+	  .footer-menu-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	  }
+	  
+	  .site-logo-wrap {
+		margin-top: 20px; /* Atur jarak sesuai kebutuhan */
+	  }
+	  
+	  .footer-menu {
+		margin-top: 20px; /* Atur jarak sesuai kebutuhan */
+	  }
+	  .site-logo{
+		right: 0px;
+	  }
+	  .credit {
+		left: 0px;
+		
+	  }
+	  
+
+
+
+
+
+
+
+
+
+
+
+/* Mengatur lebar dan warna latar belakang scrollbar */
+body::-webkit-scrollbar {
+width: 0.5em;
+background-color: #d4d5d5; /* Ganti dengan warna background scrollbar yang diinginkan */
+}
+
+/* Mengatur warna thumb scrollbar */
+body::-webkit-scrollbar-thumb {
+background-color: #ffffff; /* Ganti dengan warna thumb scrollbar yang diinginkan */
+border-radius: 10px; /* Ganti dengan radius border yang diinginkan */
+height: 10px; /* Ganti dengan tinggi thumb scrollbar yang diinginkan */
+}
+
+/* Mengatur warna thumb scrollbar saat dihover */
+body::-webkit-scrollbar-thumb:hover {
+background-color: #777; /* Ganti dengan warna thumb scrollbar saat dihover yang diinginkan */
+}
+
+
+.profile-picture {
+display: flex;
+align-items: center;
+margin-left: 3rem;
+}
+.profile-picture img:hover{
+transform: scale(1.2);
+transition: var(--transition-2);
+border: #00E194 solid 2px;
+border-radius: 50%;
+
+}
+.profile-picture img {
+width: 50px;
+height: 50px;
+}
+  .hero-header {
+	position: relative;
+	z-index: -1; /* Menyembunyikan hero di belakang navbar */
+  }
+  
+  .navbar {
+	position: sticky;
+	top: 0;
+	z-index: 1; /* Menyembunyikan navbar di depan hero */
+  }
+  .navbar-title {
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	transition: transform 0.5s ease-in-out;
+	color: white!important;
+  }
+  
+  .navbar-title:hover {
+   
+	color: #00E194!important;
+	transform: scale(1.1);
+  }
+  .navbar-brand:hover
+  {
+	transition: transform 0.5s ease-in-out;
+	transform: scale(1.2);
+  }
+
+
+  
+
+  .social-media-icons .icofont {
+	text-decoration: none; /* menghilangkan underline pada ikon */
+  }
+ 
+.navbar .nav-link,
+.navbar .navbar-title {
+color: #000000; /* Set warna teks menjadi hitam */
+transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Tambahkan animasi transisi untuk warna dan transform */
+}
+
+.navbar .nav-link:hover
+{
+color: #00E194 !important; /* Ubah warna teks menjadi #00E194 saat dihover */
+transform: scale(1.1); /* Efek skala 1.1 saat dihover */
+position: relative; /* Menjadikan posisi elemen relatif */
+}
+
+.navbar .nav-link::after
+{
+content: ""; /* Tambahkan konten kosong */
+display: block; /* Ubah menjadi elemen blok */
+width: 0; /* Set lebar awal menjadi 0 */
+height: 2px; /* Set tinggi garis bawah */
+background-color: #00E194; /* Set warna garis bawah */
+position: absolute; /* Menjadikan posisi elemen absolut */
+bottom: 5px; /* Mengatur jarak garis bawah dari teks */
+left: 0; /* Mengatur posisi kiri 0 */
+opacity: 0; /* Set opacity menjadi 0 (transparan) */
+transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out; /* Tambahkan animasi transisi untuk opacity dan lebar */
+padding-bottom: 2px;
+
+}
+
+.navbar .nav-link:hover::after
+{
+opacity: 1; /* Set opacity menjadi 1 (tidak transparan) saat dihover */
+width: 100%; /* Set lebar garis bawah saat dihover menjadi 100% */
+}
+
+.navbar .dropdown-menu {
+transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Tambahkan animasi transisi untuk opacity dan transform */
+opacity: 0; /* Set opacity dropdown menu menjadi 0 (transparan) secara default */
+transform: translateY(-10px); /* Set transform menu dropdown menggeser -10px ke atas secara default */
+}
+
+.navbar .nav-item.dropdown:hover > .dropdown-menu {
+opacity: 1; /* Set opacity dropdown menu menjadi 1 (tidak transparan) saat menu item dropdown dihover */
+transform: translateY(0); /* Set transform menu dropdown menjadi 0 saat menu item dropdown dihover */
+z-index: 1; /* Set z-index untuk menempatkan dropdown menu di atas elemen lain */
+}
+
+.navbar .nav-item.dropdown:hover > .nav-link {
+color: #00E194 !important; /* Ubah warna teks navlink menjadi #00E194 saat menu item dropdown dihover */
+transform: scale(1.1); /* Efek skala 1.1 saat menu item dropdown dihover */
+}
+
+
+
+.navbar.sticky .nav-link,
+.navbar.sticky .navbar-title {
+color: #000!important; /* Ubah warna teks menjadi hitam */
+}
+.navbar.sticky .navbar-title:hover{
+color:#00E194!important;
+}
+.navbar.sticky .dropdown-item {
+color: #000 !important; /* Ubah warna teks dropdown menjadi hitam */
+}
+
+.navbar.sticky .nav-link:hover{
+color: #00E194!important;
+}
+.navbar {
+/* Tambahkan animasi smooth menggunakan animate.css */
+transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky {
+background-color: #fff;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animate__animated {
+/* Tambahkan animasi smooth menggunakan animate.css */
+animation-fill-mode: both;
+}
+
+/* Tambahkan class animasi untuk animasi fadeInDown */
+.animate__fadeInDown {
+animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+from {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+
+			.section {
+				position: relative;
+				height: 100vh;
+			}
+			
+			.section .section-center {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: 0;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+			
+			#booking {
+				font-family: 'Cabin', sans-serif;
+				background-color: #f7f9fa;
+			}
+			
+			.booking-form {
+				position: relative;
+				max-width: 642px;
+				width: 100%;
+				margin: auto;
+				background: #fff;
+				-webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+				box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+			}
+			
+			.booking-form>.booking-bg {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				bottom: 0px;
+				width: 250px;
+				background-image: url('gambar/Traveler1.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+			
+			.booking-form>form {
+				margin-left: 250px;
+				padding: 30px;
+				border: 1px solid #f9fafc;
+				border-left: 0px;
+			}
+			
+			.booking-form .form-header {
+				margin-bottom: 30px;
+			}
+			
+			.booking-form .form-header h2 {
+				margin: 0;
+				margin-bottom: 0px;
+				font-weight: 700;
+				color: #122244;
+				font-size: 35px;
+				text-transform: capitalize;
+			}
+			
+			.booking-form .form-group {
+				position: relative;
+				margin-bottom: 20px;
+			}
+			
+			.booking-form .form-control {
+				background-color: #f7f9fa;
+				height: 40px;
+				padding: 0px 10px;
+				border-radius: 0px;
+				-webkit-transition: 0.2s;
+				transition: 0.2s;
+				color: #122244;
+				border: 0px;
+				font-size: 16px;
+				font-weight: 700;
+				-webkit-box-shadow: inset 0 1px 4px rgba(181, 193, 204, 0.3);
+				box-shadow: inset 0 1px 4px rgba(181, 193, 204, 0.3);
+			}
+			
+			.booking-form .form-control::-webkit-input-placeholder {
+				color: #dde3e8;
+			}
+			
+			.booking-form .form-control:-ms-input-placeholder {
+				color: #dde3e8;
+			}
+			
+			.booking-form .form-control::placeholder {
+				color: #dde3e8;
+			}
+			
+			.booking-form .form-control:focus {
+				-webkit-box-shadow: inset 0 1px 4px rgba(181, 193, 204, 0.3);
+				box-shadow: inset 0 1px 4px rgba(181, 193, 204, 0.3);
+			}
+			
+			.booking-form input[type="date"].form-control:invalid {
+				color: #dde3e8;
+			}
+			
+			.booking-form select.form-control {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+			
+			.booking-form select.form-control+.select-arrow {
+				position: absolute;
+				right: 0px;
+				bottom: 4px;
+				width: 32px;
+				line-height: 32px;
+				height: 32px;
+				text-align: center;
+				pointer-events: none;
+			}
+			
+			.booking-form select.form-control+.select-arrow:after {
+				content: '\279C';
+				display: block;
+				-webkit-transform: rotate(90deg);
+				transform: rotate(90deg);
+				color: #dddee9;
+				font-size: 14px;
+			}
+			
+			.booking-form .form-label {
+				color: #b5c1cc;
+				font-weight: 700;
+				-webkit-transition: 0.2s;
+				transition: 0.2s;
+				text-transform: uppercase;
+				line-height: 24px;
+				height: 24px;
+				font-size: 14px;
+				z-index: 1;
+			}
+			
+			.booking-form .form-btn {
+				margin-top: 10px;
+			}
+			
+			.booking-form .submit-btn {
+				color: #fff;
+				background-color: #6499ff;
+				font-weight: 700;
+				padding: 13px 35px;
+				font-size: 16px;
+				border: none;
+				width: 100%;
+			}
+			
+			@media only screen and (max-width: 480px) {
+				.booking-form>.booking-bg {
+					display: none;
+				}
+				.booking-form>form {
+					margin-left: 0px;
+				}
+			}
+
+		</style>
+</head>
+
+<body>
+
+
+	
+
+
+	<nav class="Navtop-mobile animated fadeIn" id="navbar"> <!-- Tambahkan class Navtop-mobile dan animated fadeIn pada navbar -->
+		<div class="navbar-container">
+			<!-- Logo dan Title di Sebelah Kiri -->
+			<div class="navbar-left">
+				<a class="navbar-brand" href="#" data-toggle="tooltip" title="Travelang" data-placement="top">
+					<img src="gambar/logo.png" alt="Logo" width="40" height="40" >
+				</a>
+				<h2 class="navbar-tit">Travelang</h2>
+			</div>
+			<!-- Foto Profile Picture di Sebelah Kanan -->
+			<div class="navbar-right">
+				<a href="#">
+					<img src="gambar/avatar.png" alt="Profile Picture" class="profile-picture"  data-toggle="tooltip" title="Account" data-placement="top">
+				</a>
+			</div>
+		</div>
+	</nav>
+	
+	<header class="navbar-mobile fixed-bottom " id="header">
+	  <nav class="nav container">
+		<div class="nav__menu " id="nav-menu">
+		  <ul class="nav__list ml-auto"> 
+			<li class="nav__item">
+			  <a href="index.html" class="nav__link active-link animate__animated animate__fadeIn"  data-toggle="tooltip" title="Home" data-placement="top">
+				<i class='fas fa-home nav__icon'></i>
+				<span class="nav__name">Home</span>
+			  </a>
+			</li>
+	
+			<li class="nav__item">
+			  <a href="index.html" class="nav__link animate__animated animate__fadeIn" data-toggle="tooltip" title="About" data-placement="top">
+				<i class='fas fa-user nav__icon'></i>
+				<span class="nav__name">About</span>
+			  </a>
+			</li>
+	
+			<li class="nav__item">
+			  <a href="index.html" class="nav__link animate__animated animate__fadeIn"  data-toggle="tooltip" title="Services" data-placement="top">
+				<i class='fas fa-cog nav__icon'></i>
+				<span class="nav__name">Services</span>
+			  </a>
+			</li>
+	
+			<!-- Menambahkan kelas animate__animated dan animate__fadeIn ke elemen di atas untuk menambahkan animasi fadeIn -->
+			
+			<!-- tambahkan kode animasi ke elemen yang diinginkan dengan menambahkan kelas animate__animated dan kelas animasi yang diinginkan (misal: animate__fadeIn, animate__bounce, dll.) -->
+			
+			<li class="nav__item">
+			  <a href="index.html" class="nav__link animate__animated animate__fadeIn"  data-toggle="tooltip" title="Contact" data-placement="top">
+				<i class='fas fa-envelope nav__icon'></i>
+				<span class="nav__name">Contact</span>
+			  </a>
+			</li>
+	
+			<li class="nav__item">
+			  <a href="index.html" class="nav__link animate__animated animate__fadeIn"  data-toggle="tooltip" title="Destination" data-placement="top">
+				<i class='fas fa-plane nav__icon'></i>
+				<span class="nav__name">Destination</span>
+			  </a>
+			</li>
+	
+			<li class="nav__item dropdown dropup">
+			  <a href="#" class="nav__link animate__animated animate__fadeIn" id="moreDropdownToggle"  data-bs-toggle="dropdown" data-toggle="tooltip" title="More" data-placement="top" >
+				<i class='fas fa-ellipsis-h nav__icon'></i>
+				<span class="nav__name">More</span>
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="moreDropdownToggle" style="top: auto; bottom: 100%;">
+				<a href="index.html" class="dropdown-item animate__animated animate__fadeIn">Gallery</a>
+				<a href="" class="dropdown-item animate__animated animate__fadeIn">Booking</a>
+			
+				<a href="index.html" class="dropdown-item animate__animated animate__fadeIn">Testimonial</a>
+			  </div>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
+	</header>
+	
+	
+	<!-- Navbar -->
+	
+	<header class="navbar-desk navbar navbar-expand-lg navbar-light sticky-top animated fadeIn" style="background-color: transparent;">
+	  <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
+		<div class="d-flex align-items-center">
+		  <a href="" class="navbar-brand p-0 me-0 me-lg-2 d-flex align-items-center" >
+			<img src="gambar/logo.png" alt="Logo" style="max-height: 50px;" class="d-block my-1" viewBox="0 0 118 94" role="img" data-toggle="tooltip" title="Travelang" data-placement="top">
+			<h2 class="navbar-title m-0 "  >Travelang</h2>
+		  </a>
+		</div>
+	
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; top: 0; right: 0; transform: translateY(50%); margin-top: 0.2rem; margin-right:1rem;">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+		  <div class="navbar-nav flex-row flex-wrap bd-navbar-nav ms-auto py-0">
+			<!-- Menambahkan element div untuk profil picture -->
+			
+			<a href="index.html" class="nav-link nav-item col-6 col-lg-auto" style="color: #fff;">Home</a>
+			<a href="index.html" class="nav-item col-6 col-lg-auto nav-link" style="color: #fff;">About</a>
+			<a href="index.html" class="nav-item col-6 col-lg-auto nav-link" style="color: #fff;">Services</a>
+			<a href="index.html" class="nav-item nav-link" style="color: #fff;">Contact</a>
+			<a href="index.html" class="nav-item nav-link" style="color: #fff;">Destination</a>
+			<div class="nav-item dropdown">
+			  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #fff;">More <i class="fas fa-caret-down"></i></a>
+			  <div class="dropdown-menu m-0">
+				<a href="index.html" class="dropdown-item">Gallery</a>
+				<a href="" class="dropdown-item">Booking</a>
+			
+				<a href="index.html" class="dropdown-item">Testimonial</a>
+			  </div>
+			</div>
+			<div class="nav-item profile-picture">
+				<a href="signup.html">
+			  <img src="gambar/avatar.png" alt="Profile Picture" style="max-height: 50px;" class="d-block rounded-circle my-1" data-toggle="tooltip" title="Account" data-placement="bottom">
+			  </a>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+
+
+
+
+	</header>
+	<div id="booking" class="section" style="
+	background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gambar/booking.jpg'); background-size: cover; background-position: center;  max-height :60%; margin-top: -78px;
+	">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="booking-bg"></div>
+						<form>
+							<div class="form-header">
+								<h2>Booking Destinasi Mu Sekarang!</h2>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Check In</span>
+										<input class="form-control" type="date" required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Check Out</span>
+										<input class="form-control" type="date" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Orang</span>
+										<select class="form-control">
+											<option></option>
+										
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Destinasi</span>
+										<select class="form-control">
+											<option>Pilih Destinasi</option>
+											
+											<option>Jepang</option>
+											<option>Dubai</option>
+											<option>Bali</option>
+											<option>London</option>
+											<option>Korea Selatan</option>
+											<option>Amsterdam</option>
+											<option>China</option>
+											<option>Italy</option>
+										
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<span class="form-label">Email</span>
+								<input class="form-control" type="email" placeholder="Enter your email">
+							</div>
+							<div class="form-group">
+								<span class="form-label">Phone</span>
+								<input class="form-control" type="tel" placeholder="Enter your phone number">
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn">Book Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	<footer class="footer-32892 pb-0 ">
+		<div class="site-section">
+		  <div class="container">
+	  
+			
+			<div class="row" style="color: #FFF;"> 
+			   <div class="col-md pr-md-5 mb-4 mb-md-0">
+			  <h3>Kontak Kami</h3>
+			  <p class="mb-4">Silahkan kunjungi segera Travelang, kalau ada yang yang ingin ditanyakan silahkan hubungi kontak dibawah ini.</p>
+			  <ul class="list-unstyled quick-info mb-4">
+				<li><a href="#" class="d-flex align-items-center"><span class="icofont-phone"></span>Telp  : +62 821 472 469</a></li>
+				<li><a href="#" class="d-flex align-items-center"><span class="icofont-email"></span>Email :info@gmail.com</a></li>
+			  </ul>
+	  
+			
+			</div>
+	  
+	  
+	  
+			<div class="col-md mb-4 mb-md-0">
+			  
+			  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.084739364345!2d115.23159441464578!3d-8.683491693760983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2409b0e5e80db%3A0xad78f1ff66b638d2!2sSMK%20TI%20Bali%20Global%20Denpasar!5e0!3m2!1sid!2sid!4v1594526597296!5m2!1sid!2sid" width="100%" height="370" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+	  
+			 
+				<div class="col-md-3 mb-4 mb-md-0">
+				  <h2>Contact Us</h2>
+				  <form>
+					<div class="form-group">
+					  <label for="inputName">Name</label>
+					  <input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+					</div>
+					<div class="form-group">
+					  <label for="inputMessage">Message</label>
+					  <textarea class="form-control" id="inputMessage" rows="5" placeholder="Enter your message"></textarea>
+					</div>
+				 <br>
+				  </form>   <form action="#" class="subscribe">
+					  <input type="text" class="form-control" placeholder="Enter your e-mail">
+					  <input type="submit" class="btn btn-submit" value="Send">
+					</form>
+				</div>
+			   
+			
+			 
+				<div class="col-12">
+				  <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
+				   
+					<div class="site-logo-wrap ml-auto">
+					  <a href="#" class="site-logo">
+						© Copyright Travelang
+					  </a>
+					  <a href="#" class="credit">
+					   I Gusti Ngurah Elang Avatar - 2023
+					  </a>
+					   <ul class="list-unstyled footer-menu mr-auto">
+					  <li><a href="#">Terms</a></li>
+					  <li><a href="#">Privacy Policy</a></li>
+					</ul>
+					</div>
+				  </div>
+				</div>
+			  
+			</div>
+		  </div>
+		</div>
+	  </footer>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+   <script src="lib/anime-3.2.1/lib/anime.js"></script>
+   <script src="lib/anime-3.2.1/lib/anime.min.js"></script>
+
+
+	
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script>
+	
+		jQuery.validator.setDefaults({
+		  	debug: true,
+		  	success:  function(label){
+        		label.attr('id', 'valid');
+   		 	},
+		});
+		$( "#myform" ).validate({
+		  	rules: {
+		    	password: "required",
+		    	confirm_password: {
+		      		equalTo: "#password"
+		    	}
+		  	},
+		  	messages: {
+		  		full_name: {
+		  			required: "Please provide an username"
+		  		},
+		  		your_email: {
+		  			required: "Please provide an email"
+		  		},
+		  		password: {
+	  				required: "Please provide a password"
+		  		},
+		  		confirm_password: {
+		  			required: "Please provide a password",
+		      		equalTo: "Wrong Password"
+		    	}
+		  	}
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+  var target = document.querySelector(this.getAttribute('aria-controls'));
+  if (target.classList.contains('show')) {
+    target.classList.remove('sho');
+  } else {
+    target.classList.add('show');
+  }
+}); 
+
+
+
+      
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('.navbar');
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  if (scrollTop > 0) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
+
+
+window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.navbar');
+  if (window.pageYOffset > 0) {
+    navbar.style.backgroundColor = '#fff'; // Ganti dengan warna latar belakang yang diinginkan saat navbar sticky aktif
+    navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'; // Tambahkan efek shadow jika diinginkan
+  } else {
+    navbar.style.backgroundColor = 'transparent';
+    navbar.style.boxShadow = 'none';
+  }
+});
+
+var header = document.querySelector('.navbar');
+var isNavbarSticky = false;
+
+// Tambahkan class animasi dari animate.css saat navbar menjadi sticky
+window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  if (scrollTop > 0 && !isNavbarSticky) {
+    isNavbarSticky = true;
+    header.classList.add('sticky', 'animate__animated', 'animate__fadeInDown');
+    header.style.animationDuration = '0.5s'; // Sesuaikan durasi animasi sesuai kebutuhan
+  } else if (scrollTop === 0 && isNavbarSticky) {
+    isNavbarSticky = false;
+    header.classList.remove('sticky', 'animate__fadeInDown');
+    header.style.animationDuration = '0s'; // Set durasi animasi menjadi 0 saat kembali ke navbar biasa
+  }
+});
+
+    
+
+
+$(document).ready(function() {
+  var navbar = $(".Navtop-mobile");
+  var stickyClass = "navtop-mobile-sticky";
+  var stickyOffset = navbar.offset().top;
+
+  $(window).on("scroll", function() {
+      var scrollTop = $(window).scrollTop();
+
+      if (scrollTop > stickyOffset) {
+          navbar.addClass(stickyClass);
+      } else {
+          navbar.removeClass(stickyClass);
+      }
+  });
+});
+ 
+
+var headerMobile = document.querySelector('.navtop-mobile');
+var isNavbarMobileSticky = false;
+
+// Tambahkan class animasi dari animate.css saat navbar mobile menjadi sticky
+window.addEventListener('scroll', function() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollTop > 0 && !isNavbarMobileSticky) {
+        isNavbarMobileSticky = true;
+        headerMobile.style.opacity = '1'; // Set opacity menjadi 1 saat navbar menjadi sticky
+        headerMobile.classList.add('navbar-sticky', 'animate__animated', 'animate__fadeInDown');
+    } else if (scrollTop === 0 && isNavbarMobileSticky) {
+        isNavbarMobileSticky = false;
+        headerMobile.style.opacity = '0'; // Set opacity menjadi 0 saat navbar menjadi non-sticky
+        headerMobile.classList.remove('navbar-sticky', 'animate__fadeInDown');
+    }
+});
+
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+	</script>
+
+</html>
